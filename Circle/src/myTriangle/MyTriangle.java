@@ -1,5 +1,7 @@
 package myTriangle;
 
+import java.util.Objects;
+
 public class MyTriangle extends MyPoint {
     private MyPoint v1;
     private MyPoint v2;
@@ -88,4 +90,24 @@ public class MyTriangle extends MyPoint {
 
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof MyTriangle)) return false;
+        MyTriangle trianglemy = (MyTriangle) obj;
+        return v1.equals(trianglemy.v1) && v2.equals(trianglemy.v2) && v3.equals(trianglemy.v3);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + v1.hashCode();
+        result = 31 * result + v2.hashCode();
+        result = 31 * result + v3.hashCode();
+        return result;
+    }
+
+
+
 }

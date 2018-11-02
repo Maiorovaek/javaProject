@@ -1,5 +1,7 @@
 package myPoint;
 
+import java.util.Objects;
+
 public class MyPoint {
     private int x =0;
     private int y =0;
@@ -60,6 +62,19 @@ public class MyPoint {
     }
 
 
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof MyPoint)) return false;
+        MyPoint myPoint = (MyPoint) obj;
+        return x == myPoint.x &&
+                y == myPoint.y;
+    }
 
 
+    public int hashCode() {
+        int result =17;
+        result =31*result +x ;
+        result = 31*result + y;
+        return result;
+    }
 }

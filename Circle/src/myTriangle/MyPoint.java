@@ -40,4 +40,19 @@ public double distance(int x, int y){
                 ", y=" + y +
                 '}';
     }
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof MyPoint)) return false;
+        MyPoint myPoint = (MyPoint) obj;
+        return x == myPoint.x &&
+                y == myPoint.y;
+    }
+
+
+    public int hashCode() {
+        int result =17;
+        result =31*result +x ;
+        result = 31*result + y;
+        return result;
+    }
 }

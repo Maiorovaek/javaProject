@@ -1,6 +1,7 @@
 package books;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Book extends Author {
     private String name;
@@ -20,6 +21,27 @@ public class Book extends Author {
         this.price = price;
         this.qty = qty;
     }
+
+
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Author)) return false;
+        if (!super.equals(obj)) return false;
+        Book book = (Book) obj;
+        return qty == book.qty &&  name.equals(book.name) &&
+                Double.doubleToLongBits(price)==book.price && Arrays.equals(authors, book.authors);
+    }
+
+    public int hashCode() {
+        int result =17;
+        result =31*result + name.hashCode();
+        result = 31*result + qty;
+        long longBits = Double.doubleToLongBits(price);
+        result = 37 * result + (int)(longBits - (longBits >>> 32));
+        result = 31 * result + Arrays.hashCode(authors);
+        return result;
+    }
+
 
     public String getName() {
         return name;

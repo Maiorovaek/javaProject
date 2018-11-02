@@ -1,5 +1,7 @@
 package employee;
 
+import java.util.Objects;
+
 public class Employee {
     private int id;
     private String firstName;
@@ -46,12 +48,31 @@ public class Employee {
         return salary * percent / 100 + salary;
     }
 
-    @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
                 ", name='" + firstName + " " + lastName + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Employee)) return false;
+        Employee employee = (Employee) obj;
+        return id == employee.id &&
+                salary == employee.salary &&
+                firstName.equals(employee.firstName) &&
+                lastName.equals(employee.lastName);
+    }
+
+    public int hashCode() {
+        int result = 17;
+        result = 31*result + id;
+        result = 31*result + salary;
+        result = 31*result + lastName.hashCode();
+        result = 31*result + firstName.hashCode();
+        return result;
     }
 }

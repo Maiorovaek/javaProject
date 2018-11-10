@@ -146,4 +146,24 @@ public class MyComplex {
         return  this;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o instanceof MyComplex) return false;
+        MyComplex myComplex = (MyComplex) o;
+        return Double.doubleToLongBits(real)==myComplex.real &&
+        Double.doubleToLongBits(imag)== myComplex.imag;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result =17;
+
+        long longBits = Double.doubleToLongBits(real);
+        result = 31 * result + (int)(longBits - (longBits >>> 32));
+        long longBits2 = Double.doubleToLongBits(imag);
+        result = 31 * result + (int)(longBits2 - (longBits2 >>> 32));
+        return result;
+    }
 }

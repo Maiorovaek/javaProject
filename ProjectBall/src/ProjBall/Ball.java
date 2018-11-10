@@ -1,5 +1,7 @@
 package ProjBall;
 
+import java.util.Objects;
+
 public class Ball {
     private float x;
     private float y;
@@ -75,4 +77,25 @@ public class Ball {
     public String toString() {
         return "Ball{" + "(" + x +"," + y +") speed=(" + xDelte + ", " + yDelte + ")}";
     }
+
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + Float.floatToIntBits(x);
+        result = 31 * result + Float.floatToIntBits(y);
+        result = 31 * result + radius;
+        result = 31 * result + Float.floatToIntBits(xDelte);
+        result = 31 * result + Float.floatToIntBits(yDelte);
+        return result;
+    }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o instanceof Ball) return false;
+        Ball ball = (Ball) o;
+        return Float.floatToIntBits(x) == ball.x && Float.floatToIntBits(y) == ball.y &&
+                radius == ball.radius &&
+                Float.floatToIntBits(xDelte) == ball.xDelte && Float.floatToIntBits(yDelte) == ball.yDelte;
+    }
+
+
+
 }

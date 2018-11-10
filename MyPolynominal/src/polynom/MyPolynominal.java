@@ -1,5 +1,7 @@
 package polynom;
 
+import java.util.Arrays;
+
 public class MyPolynominal {
     private double[] coeffs;
 
@@ -58,5 +60,17 @@ public class MyPolynominal {
             }
         }
         return new MyPolynominal(mulresult);
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o  instanceof MyPolynominal) return false;
+        MyPolynominal pol = (MyPolynominal) o;
+        return Arrays.equals(coeffs, pol.coeffs);
+    }
+
+
+    public int hashCode() {
+        return Arrays.hashCode(coeffs);
     }
 }

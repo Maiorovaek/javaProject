@@ -108,7 +108,7 @@ if(bookName.getText().isEmpty()){
           int valPrice =  Integer.parseInt(bookPrice.getText());
           int valCount =   Integer.parseInt(bookCount.getText());
             if ((valData > 2019 || valData<1300) || valPrice <= 0 || valCount <= 0) {
-
+                strb.append("Price and count  must be Integer >0, data >1300 and <2019");
                 result = false;
             }
         } catch (NumberFormatException e) {

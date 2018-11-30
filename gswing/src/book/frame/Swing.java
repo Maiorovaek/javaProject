@@ -75,6 +75,7 @@ public class Swing extends JFrame {
             b4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                bookModel.clean();
                 try(FileInputStream file = new FileInputStream("Library.txt")) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(file));
                     String buffer;
@@ -88,11 +89,13 @@ public class Swing extends JFrame {
                         book.setPrice(Integer.parseInt(st.nextToken().trim()));
                         book.setCount(Integer.parseInt(st.nextToken().trim()));
                         book.setData(Integer.parseInt(st.nextToken().trim()));
+
                         bookModel.addBook(book);
                         buffer = reader.readLine();
+
                     }
                     reader.close();
-                    table.updateUI();
+                  //  table.updateUI();
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }

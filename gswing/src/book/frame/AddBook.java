@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 
 public class AddBook extends JFrame {
-     Book newBook = new Book();
+    Book newBook = new Book();
     String status;
     BookModel bookModel;
     JTextField bookAuthor = new JTextField("", 40);
@@ -17,7 +17,7 @@ public class AddBook extends JFrame {
     JTextField bookPrice = new JTextField("", 20);
     JTextField bookCount = new JTextField("", 10);
     JTextField bookData = new JTextField("", 5);
-    JButton create = new JButton("Add book") ;
+    JButton create = new JButton("Add book");
 
     public AddBook() {
         super("Add Book");
@@ -47,8 +47,8 @@ public class AddBook extends JFrame {
 
     }
 
-    public AddBook(BookModel bookModel){
-            this();
+    public AddBook(BookModel bookModel) {
+        this();
 
         create.addActionListener(new ActionListener() {
             @Override
@@ -61,45 +61,65 @@ public class AddBook extends JFrame {
                     newBook.setData(Integer.parseInt(bookData.getText()));
                     saveToFile(newBook);
                     bookModel.addBook(newBook);
-
+                    setVisible(false);
+                    dispose();
                 } else {
                     JOptionPane.showMessageDialog(AddBook.this, "Error " + status);
                 }
-                setVisible(true);
-                dispose();
+
 
             }
         });
     }
-            public boolean isValid(BookModel bookModel) {
-                boolean result = true;
-                String regExpStr = "^[a-zA-Z\\\\s]{1,}$";
-                String regExpInt = "^[0-9]{1,}$";
 
-                StringBuilder strb = new StringBuilder();
+    public boolean isValid(BookModel bookModel) {
+        boolean result = true;
+//        String regExpStr = "^[a-zA-Z\\\\s]{1,}$";
+//        String regExpInt = "^[0-9]{1,}$";
 
+        StringBuilder strb = new StringBuilder();
 
-                if (!(bookAuthor.getText().matches(regExpStr))) {
-                    strb.append("You entered  incorrect name author");
+if(bookName.getText().isEmpty()){
+    strb.append("name book \n");
+    result = false;
+}
+        if (bookAuthor.getText().isEmpty()) {
+
+            strb.append("name author \n");
+            result = false;
+        }
+
+        if (bookPrice.getText().isEmpty()) {
+            strb.append(" price\n");
+            result = false;
+
+        }
+
+        if (bookCount.getText().isEmpty()) {
+                    strb.append(" count\n");
+                    result = false;
+
+                }
+                if (bookData.getText().isEmpty() ) {
+                    strb.append(" year\n");
                     result = false;
                 }
 
-                if (!(bookPrice.getText().matches(regExpInt) & (Integer.parseInt(bookPrice.getText()) > 0))) {
-                    strb.append("You entered incorrect price.");
-                    result = false;
-                }
-                if (!(Integer.parseInt(bookCount.getText()) > 0)) {
-                    strb.append("You entered incorrect count");
-                    result = false;
+        try {
+         int valData =    Integer.parseInt(bookData.getText());
+          int valPrice =  Integer.parseInt(bookPrice.getText());
+          int valCount =   Integer.parseInt(bookCount.getText());
+            if ((valData > 2019 || valData<1300) || valPrice <= 0 || valCount <= 0) {
 
-                }
+                result = false;
+            }
+        } catch (NumberFormatException e) {
+            strb.append("Price and count  must be Integer >0, data >1300 and <2019");
+            result = false;
+        }
 
-                if (!((Integer.parseInt(bookData.getText()) > 1300) && (Integer.parseInt(bookData.getText()) < 2019))) {
-                    strb.append("You entered incorrect year");
-                    result = false;
-
-                }
-                status = strb.toString();
+                String str = "You entered incorrect: \n ";
+                status = str + strb.toString();
 
                 return result;
             }

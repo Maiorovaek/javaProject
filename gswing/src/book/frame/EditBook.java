@@ -2,6 +2,7 @@ package book.frame;
 import book.model.BookModel;
 import book.entity.Book;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,7 +20,6 @@ public class EditBook extends AddBook {
         bookData.setText(Integer.toString(bookModel.getBooks().get(row).getData()));
         create.setText("Edit book");
 
-
         create.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (EditBook.super.isValid(bookModel)) {
@@ -29,10 +29,13 @@ public class EditBook extends AddBook {
                     newBooks.setAuthor(bookAuthor.getText());
                     newBooks.setPrice(Integer.parseInt(bookPrice.getText()));
                     newBooks.setCount(Integer.parseInt(bookCount.getText()));
-                    newBook.setData(Integer.parseInt(bookData.getText()));
+                    newBooks.setData(Integer.parseInt(bookData.getText()));
                     saveToFile(newBooks);
                       setVisible(false);
                     dispose();
+                }
+                else {
+                    JOptionPane.showMessageDialog(EditBook.this, "Error " + status);
                 }
             }
         });

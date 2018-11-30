@@ -74,8 +74,6 @@ public class AddBook extends JFrame {
 
     public boolean isValid(BookModel bookModel) {
         boolean result = true;
-//        String regExpStr = "^[a-zA-Z\\\\s]{1,}$";
-//        String regExpInt = "^[0-9]{1,}$";
 
         StringBuilder strb = new StringBuilder();
 

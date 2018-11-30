@@ -69,3 +69,14 @@ ges, er, 4, 4, 2000
 scascca, ca, 4, 4, 2002
 kj, k, 5, 5, 2002
 kjjj, kl, 5, 5, 2002
+sdcsdc, sdc, 23, 3, 2000
+sdcsdcewf, sdc, 23, 3, 2000
+jAVAaf, AUTHOR, 100, 5, 2011
+Java11awdad, Michal, 2000, 20, 2011
+jAVAsfsf, AUTHOR, 100, 5, 2011
+jAVAasd, AUTHOR, 100, 5, 2011
+jAVAwedwed, AUTHOR, 100, 5, 2011
+Java15ewdwed, Joe, 2011, 1, 2012
+jAVAeref, AUTHOR, 100, 5, 2011
+awdw, awd, 23, 3, 2001
+awdwewew, awd, 23, 3, 2001

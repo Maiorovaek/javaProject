@@ -130,10 +130,3 @@ public class BookModel extends AbstractTableModel {
     }
 
 }
-
-
-
-
-
-
-

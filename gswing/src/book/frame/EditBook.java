@@ -30,6 +30,7 @@ public class EditBook extends AddBook {
                     newBooks.setPrice(Integer.parseInt(bookPrice.getText()));
                     newBooks.setCount(Integer.parseInt(bookCount.getText()));
                     newBooks.setData(Integer.parseInt(bookData.getText()));
+                    bookModel.addNewBook(newBooks);
                     saveToFile(newBooks);
                       setVisible(false);
                     dispose();

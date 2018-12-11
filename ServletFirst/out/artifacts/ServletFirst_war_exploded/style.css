@@ -1,0 +1,22 @@
+#centerLayer {
+    margin-left: 30%;
+    width: 40%;
+    background: rgba(74, 168, 245, 0.24);
+    padding: 10px;
+}
+
+.label-field{
+    width: 70px;
+    float: left;
+}
+.btn_login {
+    background-color: #03A9F4;
+    border: none;
+    padding: 10px;
+    width: 140px;
+    border-radius: 3px;
+    box-shadow: 1px 5px 20px -5px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}

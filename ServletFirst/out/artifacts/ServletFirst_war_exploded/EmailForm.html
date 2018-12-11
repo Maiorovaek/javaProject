@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send mail</title>
+    <link type="text/css" rel="stylesheet" href="/ServletFirst_war_exploded/style.css">
+</head>
+<body>
+<div id=centerLayer>
+<form action="EmailSend" method="post">
+    <div class="field-group">
+        <div class = "label-field"> To:</div><input type="text" name="email"/>
+    </div><br/>
+    <div class="field-group">
+        <div class = "label-field"> CC:</div><input type="text" name="cc"/></div><br/>
+
+        <div class="field-group">
+            <div class = "label-field">Subject:</div><input type="text" name="subject"></div><br/>
+
+            <div class="field-group">
+                <div class = "label-field">Text:</div><textarea rows="10" cols="70" name="text"></textarea></div><br/>
+
+    <input class="btn_login" type="submit" value="Send"/>
+</form>
+</div>
+</body>
+</html>

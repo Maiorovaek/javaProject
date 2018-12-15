@@ -21,19 +21,20 @@
     margin-top: 10px;
     cursor: pointer;
     width: 100%;
+    font-size: 21px;
+
 
 }
 
 input[type=number], select {
-    padding: 17px 22px;
-    margin: 2px 14px 9px 3px;
+    padding: 8px 22px;
+    margin: 2px 8px 12px 3px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     width: 100%;
-    font-size: 18px;
-
+    font-size: 25px;
 }
 
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><books library="MyLibrary">
+
+
+    <book>
+        <id>5</id>
+        <author>Marsel5</author>
+        <nameBook>Book5</nameBook>
+        <page>200</page>
+        <year>2005</year>
+        <date>2014,2,11</date>
+    </book>
+
+
+    
+
+<book>
+<id>1</id>
+<author>Author</author>
+<nameBook>Name book</nameBook>
+<page>2</page>
+<year>222</year>
+<date>Sat Dec 29 03:16:40 MSK 2018</date>
+</book>
+</books>

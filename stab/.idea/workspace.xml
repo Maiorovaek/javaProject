@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0ddc9a83-d487-444a-8d32-65dae6056938" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="class#6615:8212" />
+                <element signature="e#8303#8311#0" expanded="true" />
+                <element signature="e#9634#9642#0" expanded="true" />
+                <element signature="method#vlidate#0;class#MySampleApplication#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/MySampleApplication.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/MySampleApplication.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwt1.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/BookssServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="93" column="17" lean-forward="true" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>serviceI</find>
+      <find>docum</find>
+      <find>docu</find>
+      <find>compara</find>
+      <find>compar</find>
+      <find>DATAP</find>
+      <find>HANDL</find>
+      <find>clic</find>
+      <find>column</find>
+      <find>table</find>
+      <find>2</find>
+      <find>cell</find>
+      <find>celll</find>
+      <find>btnDelete</find>
+      <find>dele</find>
+      <find>add</find>
+      <find>doc</find>
+      <find>xml</find>
+      <find>singleSelectionModel</find>
+      <find>dataProvider</find>
+      <find>authorBook</find>
+      <find>delet</find>
+      <find>if</find>
+      <find>del</find>
+      <find>row</find>
+      <find>selectedBook</find>
+      <find>gwt-Button</find>
+      <find>gwt-TextBox</find>
+      <find>addSelectionChangeHandler</find>
+      <find>TextBo</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/war/login.css" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/Login.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/LoginResources.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/login.ui.xml" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/model/MyHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/model/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/model/Bookss.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/Parser.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/model/Parser.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/model/ParserNewFile.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/ServletParser.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/GreetingServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/LibraryBook.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/RemoteServicet.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/GreetingService.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/GreetingService.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/GreetingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/shared/Bookss.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/shared/FieldVerifier.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/ParserXmlNew.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/BookssServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/BookssService.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookService.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/dvs.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/MySampleApplication.gwt.xml" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/SortBookId.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/SortBookService.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/SortBookServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/Bookss.java" />
+        <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/BookssServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gwt1.iml" />
+        <option value="$PROJECT_DIR$/data.xml" />
+        <option value="$PROJECT_DIR$/war/MySampleApplication.html" />
+        <option value="$PROJECT_DIR$/war/MySampleApplication.css" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java" />
+      </list>
+    </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="gwt1/invalid/GWT" />
+    </ignored-facets>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="y" value="32" />
+    <option name="width" value="1021" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="stab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mySampleApplication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mySampleApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mySampleApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stab" type="462c0819:PsiDirectoryNode" />
+              <item name="war" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gwt-2.8.2/gwt-dev.jar!/" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexKate\Desktop\examples\stab\src\com\mySampleApplication\model" />
+      <recent name="C:\Users\AlexKate\Desktop\examples\stab\src\com\mySampleApplication\client" />
+      <recent name="W:\example\gwt1\src\com\mySampleApplication\client" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexKate\Desktop\examples\stab\war\WEB-INF\lib" />
+      <recent name="C:\Users\AlexKate\Desktop\examples\stab\war\WEB-INF" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mySampleApplication.client" />
+      <recent name="com.mySampleApplication.model" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="GWT Configuration.MySampleApplication">
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddBookServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mySampleApplication.server.AddBookServiceImpl" />
+      <module name="gwt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookssServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mySampleApplication.server.BookssServiceImpl" />
+      <module name="gwt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteBookServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mySampleApplication.server.DeleteBookServiceImpl" />
+      <module name="gwt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mySampleApplication.client.Parser" />
+      <module name="gwt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserNewFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mySampleApplication.model.ParserNewFile" />
+      <module name="gwt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySampleApplication" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <option name="RUN_PAGE" value="MySampleApplication.html" />
+      <option name="USE_SUPER_DEV_MODE" value="true" />
+      <module name="gwt1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DeleteBookServiceImpl" />
+        <item itemvalue="Application.AddBookServiceImpl" />
+        <item itemvalue="Application.BookssServiceImpl" />
+        <item itemvalue="Application.ParserNewFile" />
+        <item itemvalue="Application.Parser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.15191898" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49443206" weight="0.32359308" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4988864" weight="0.32690248" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48552337" visible="true" weight="0.46623793" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39871383" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011136" side_tool="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" sideWeight="0.49583334" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32916668" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="JSF" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.06076759" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.27575442" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49443206" weight="0.32575756" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4988864" weight="0.32792208" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48552337" visible="true" weight="0.31277058" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3995657" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011136" side_tool="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" sideWeight="0.49583334" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32916668" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="JSF" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.32995737" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/model/MyHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/model/Book.java" />
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/AbstractCellTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="945" column="5" lean-forward="true" selection-start-line="945" selection-start-column="5" selection-end-line="945" selection-end-column="5" />
+          <folding>
+            <element signature="e#31898#31899#0" expanded="true" />
+            <element signature="e#31957#31958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/model/ParserNewFile.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/ServletParser.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/shared.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/LibraryBook.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/RemoteServicet.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/GreetingService.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/GreetingServiceAsync.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/GreetingServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/Create.java" />
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/client/rpc/RemoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/ParserXmlNew.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/view/client/ListDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="558" column="17" selection-start-line="558" selection-start-column="17" selection-end-line="558" selection-end-column="17" />
+          <folding>
+            <element signature="e#14609#14610#0" expanded="true" />
+            <element signature="e#14637#14638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/CellTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/client/DOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="343" column="55" lean-forward="true" selection-start-line="343" selection-start-column="55" selection-end-line="343" selection-end-column="55" />
+          <folding>
+            <element signature="e#10197#10198#0" expanded="true" />
+            <element signature="e#10256#10257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
+          <folding>
+            <element signature="e#6283#6284#0" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/dvs.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/shared/FieldVerifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" />
+          <folding>
+            <element signature="e#0#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/i18n/client/impl/cldr/LocaleNativeDisplayNames-generated.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="654" selection-start-line="654" selection-end-line="654" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/dom/client/TableCellElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="126" column="24" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/AbstractHasData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="950" column="29" selection-start-line="950" selection-start-column="29" selection-end-line="950" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/MySampleApplication.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/SortBookService.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/SortBookServiceAsync.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/Bookss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/BookssService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/BookssServiceAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/SortBookId.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookServiceAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/server/rpc/RPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="607" selection-start-line="607" selection-end-line="607" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/server/rpc/RemoteServiceServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="302" column="35" lean-forward="true" selection-start-line="302" selection-start-column="35" selection-end-line="302" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="930" column="49" selection-start-line="930" selection-start-column="49" selection-end-line="930" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/BookssServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="93" column="17" lean-forward="true" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwt1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/MySampleApplication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/MySampleApplication.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#6615:8212" />
+            <element signature="e#8303#8311#0" expanded="true" />
+            <element signature="e#9634#9642#0" expanded="true" />
+            <element signature="method#vlidate#0;class#MySampleApplication#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>gwt1:Web exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>gson-2.8.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>gwt1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>gwt-user</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+    font-family: verdana, sans-serif;
+}
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: #777777;
+    margin: 40px 0px 70px;
+    text-align: center;
+}
+
+.field_error{
+border: 1px red;
+}
+
+.gwt-TextBox{
+    size: 15px;
+    padding: 10px;
+    border: 1px solid #c8cacd;
+    border-radius: 5px;
+    background: #f7fbfc;
+}
+
+/*.gwt-Button {*/
+    /*text-decoration: none;*/
+    /*cursor: hand;*/
+
+    /*width: 153px;*/
+    /*height: 56px;*/
+    /*padding: 0;*/
+    /*border-radius: 5px;*/
+    /*background-color: #bb0303;*/
+    /*font-size: 16px;*/
+    /*text-transform: uppercase;*/
+    /*margin: 141px 20px;*/
+    /*color: white;*/
+/*}*/
+
+
+
+
+

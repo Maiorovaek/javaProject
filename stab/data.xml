@@ -1,6 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?><books library="MyLibrary">
+<?xml version="1.0" encoding="UTF-8"?>
+<books library="MyLibrary">
+    <book>
+        <id>1</id>
+        <author>Marsel1</author>
+        <nameBook>Book1</nameBook>
+        <page>200</page>
+        <year>2005</year>
+        <date>2014,2,11</date>
+    </book>
 
+    <book>
+        <id>2</id>
+        <author>Marsel2</author>
+        <nameBook>Book2</nameBook>
+        <page>200</page>
+        <year>2005</year>
+        <date>2014,2,11</date>
+    </book>
+    <book>
+        <id>3</id>
+        <author>Marsel3</author>
+        <nameBook>Book3</nameBook>
+        <page>200</page>
+        <year>2005</year>
+        <date>2014,2,11</date>
+    </book>
 
+    <book>
+        <id>4</id>
+        <author>Marsel4</author>
+        <nameBook>Book4</nameBook>
+        <page>200</page>
+        <year>2005</year>
+        <date>2014,2,11</date>
+    </book>
     <book>
         <id>5</id>
         <author>Marsel5</author>
@@ -9,16 +42,22 @@
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
+    <book>
+        <id>6</id>
+        <author>Author6</author>
+        <nameBook>Name book6</nameBook>
+        <page>200</page>
+        <year>2011</year>
+        <date>Fri Dec 28 00:17:55 MSK 2018</date>
+    </book>
+    <book>
+        <id>7</id>
+        <author>Author7</author>
+        <nameBook>Name book7</nameBook>
+        <page>200</page>
+        <year>2011</year>
+        <date>Fri Dec 28 00:17:55 MSK 2018</date>
+    </book>
 
 
-    
-
-<book>
-<id>1</id>
-<author>Author</author>
-<nameBook>Name book</nameBook>
-<page>2</page>
-<year>222</year>
-<date>Sat Dec 29 03:16:40 MSK 2018</date>
-</book>
 </books>

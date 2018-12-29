@@ -155,7 +155,7 @@ public class MySampleApplication implements EntryPoint {
 
 
         table.setRowData(books);
-        table.setPageSize(5);
+        table.setPageSize(10);
 
         button.addClickHandler(new ClickHandler() {
             @Override

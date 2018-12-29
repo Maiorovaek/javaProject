@@ -37,12 +37,24 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
       //  String yearBook = bookDel.getNameBook();
 
 
-        try {
+
 
 
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance("com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl", this.getClass().getClassLoader());
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document document = db.parse(new FileInputStream("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
+        DocumentBuilder db = null;
+        try {
+            db = dbf.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+        Document document = null;
+        try {
+            document = db.parse(new FileInputStream("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 //            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -74,22 +86,23 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
                 }
             }
 
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        Transformer transformer = null;
+        try {
+            transformer = TransformerFactory.newInstance().newTransformer();
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        }
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             StreamResult streamResult = new StreamResult(new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
             DOMSource domSource = new DOMSource(document);
         //     Result desc = new StreamResult(System.out);
+        try {
             transformer.transform(domSource, streamResult);
-
         } catch (TransformerException e) {
             e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
         }
+
+
         return list;
     }
 

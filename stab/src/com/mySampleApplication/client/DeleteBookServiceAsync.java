@@ -10,5 +10,6 @@ import java.util.List;
 public interface DeleteBookServiceAsync {
 
 
-    void deleteBook( Bookss booksses, List<Bookss> list, AsyncCallback<List <Bookss>> async);
+
+    void deleteBook(Bookss booksses, AsyncCallback callback);
 }

@@ -195,6 +195,32 @@ public class MySampleApplication implements EntryPoint {
         panel.add(nameBookTextBox);
         panel.add(numberPageTextBox);
         panel.add(yearTextBox);
+        final SingleSelectionModel<Bookss> singleSelectionModel = new SingleSelectionModel<Bookss>();
+
+
+
+        SelectionChangeEvent.Handler tableHandler = new SelectionChangeEvent.Handler() {
+            @Override
+            public void onSelectionChange(SelectionChangeEvent event) {
+                Bookss selectedBook = singleSelectionModel.getSelectedObject();
+
+
+                Integer idDel = selectedBook.getId();
+                String authorDel = selectedBook.getAuthor();
+                String nameBookDel = selectedBook.getNameBook();
+                Integer pageDel = selectedBook.getNumberPages();
+                Integer yearDel = selectedBook.getYear();
+                Date dateDel = selectedBook.getDateCreate();
+
+                selectedBook = new Bookss(idDel, authorDel, nameBookDel, pageDel, yearDel, dateDel);
+                clickBook = selectedBook;
+            }
+        };
+
+        singleSelectionModel.addSelectionChangeHandler(tableHandler);
+        table.setSelectionModel(singleSelectionModel);
+
+
         panel.add(table);
         panel.add(btnAdd);
         panel.add(buttonprev);
@@ -250,11 +276,6 @@ public class MySampleApplication implements EntryPoint {
         });
 
 
-
-
-
-
-        final SingleSelectionModel<Bookss> singleSelectionModel = new SingleSelectionModel<Bookss>();
         btnDelete.addClickHandler(new ClickHandler() {
 
             @Override
@@ -263,94 +284,48 @@ public class MySampleApplication implements EntryPoint {
 
                 int row = table.getKeyboardSelectedRow();
                 table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
-
+               // table.setSelectionModel(singleSelectionModel);
 
                 DeleteBookServiceAsync deleteBookServiceAsync = GWT.create(DeleteBookService.class);
+                if (clickBook != null) {
+                    deleteBookServiceAsync.deleteBook(clickBook, new AsyncCallback() {
+                        @Override
+                        public void onFailure(Throwable caught) {
 
-                deleteBookServiceAsync.deleteBook(clickBook, books, new AsyncCallback <List<Bookss>>() {
-                    @Override
-                    public void onFailure(Throwable caught) {
+                            Window.alert("DelBook to obtain server response: "
+                                    + caught.getMessage());
+                        }
 
-                        Window.alert("DelBook to obtain server response: "
-                                + caught.getMessage());
-                    }
+                        @Override
+                        public void onSuccess(Object result) {
 
-                    @Override
-                    public void onSuccess(List<Bookss> result) {
-                        table.setRowData(row, books);
-                        table.setSelectionModel(singleSelectionModel);
-                        books.remove(row);
-                        table.removeFromParent();
-                        createTableNew(books);
-                        createPanel();
-                    }
-
-
-                });
+                            books.remove(row);
+                            table.setRowData(row, books);
+                            table.removeFromParent();
+                            createTableNew(books);
+                            createPanel();
+                        }
 
 
+                    });
 
 
-
-
-
-
-
-
-
-
-
-
-                final SingleSelectionModel<Bookss> singleSelectionModel = new SingleSelectionModel<Bookss>();
-
-                singleSelectionModel.addSelectionChangeHandler(new SelectionChangeEvent.Handler() {
-
-                    public void onSelectionChange(SelectionChangeEvent event) {
-
-                        Bookss selectedBook = singleSelectionModel.getSelectedObject();
-
-
-                        Integer idDel = selectedBook.getId();
-                        String authorDel = selectedBook.getAuthor();
-                        String nameBookDel = selectedBook.getNameBook();
-                        Integer pageDel = selectedBook.getNumberPages();
-                        Integer yearDel = selectedBook.getYear();
-                        Date dateDel = selectedBook.getDateCreate();
-
-                        selectedBook = new Bookss(idDel, authorDel, nameBookDel, pageDel, yearDel, dateDel);
-                        clickBook = selectedBook;
-
-                    }
-
-                });
-
-
-
-
-                table.setSelectionModel(singleSelectionModel);
+                  //  table.setSelectionModel(singleSelectionModel);
 //                pane.add(table);
 //
 //                RootPanel.get("bookList").add(mainPanel);
-                Window.alert(clickBook + " delete!!!!!!!!!!!");
+                    Window.alert(clickBook + " delete!!!!!!!!!!!");
+                } else {
+                    Window.alert("select row in table");
+                }
             }
 
         });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
+
 
     private boolean vlidate() {
         boolean result = true;

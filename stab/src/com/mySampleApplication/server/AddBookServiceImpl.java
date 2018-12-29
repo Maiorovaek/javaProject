@@ -24,10 +24,6 @@ import java.io.Writer;
 public class AddBookServiceImpl extends RemoteServiceServlet implements AddBookService {
     @Override
     public void addBook(Bookss newBook) {
-      //  DocumentBuilder documentBuilder = null;
-
-        //    documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance("com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl", this.getClass().getClassLoader());
         DocumentBuilder documentBuilder = null;
         try {

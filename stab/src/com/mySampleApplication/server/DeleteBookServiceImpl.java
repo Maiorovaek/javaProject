@@ -22,24 +22,7 @@ import java.util.List;
 
 public class DeleteBookServiceImpl extends RemoteServiceServlet implements DeleteBookService {
     @Override
-    public List<Bookss> deleteBook(Bookss bookDel, List<Bookss> list) {
-
-      //  list.remove(row);
-//        BookssServiceImpl bookssService = new BookssServiceImpl();
-//      List<Bookss> bookListN =   bookssService.listBooks();
-//         int id = bookListN.indexOf(bookDel);
-//       bookListN.remove(row);
-
-       // Integer idBook = bookDel.getId();
-        String authorBook = bookDel.getAuthor();
-        String nameBook = bookDel.getNameBook();
-      //  String pageBook = bookDel.getNameBook();
-      //  String yearBook = bookDel.getNameBook();
-
-
-
-
-
+    public void deleteBook(Bookss bookDel) {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance("com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl", this.getClass().getClassLoader());
         DocumentBuilder db = null;
         try {
@@ -56,11 +39,12 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
             e.printStackTrace();
         }
 
+        // Integer idBook = bookDel.getId();
+        String authorBook = bookDel.getAuthor();
+        String nameBook = bookDel.getNameBook();
+        //  String pageBook = bookDel.getNameBook();
+        //  String yearBook = bookDel.getNameBook();
 
-//            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-//            DocumentBuilder db = dbf.newDocumentBuilder();
-//            File file = new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml");
-//            Document document = db.parse(file);
 
             NodeList bookList = document.getElementsByTagName("book");
 
@@ -93,9 +77,9 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
             e.printStackTrace();
         }
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            StreamResult streamResult = new StreamResult(new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
             DOMSource domSource = new DOMSource(document);
-        //     Result desc = new StreamResult(System.out);
+        StreamResult streamResult = new StreamResult(new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
+
         try {
             transformer.transform(domSource, streamResult);
         } catch (TransformerException e) {
@@ -103,7 +87,6 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
         }
 
 
-        return list;
     }
 
 }

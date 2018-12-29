@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="528">
+              <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,10 +29,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="222">
+              <caret line="197" column="101" lean-forward="true" selection-start-line="197" selection-start-column="101" selection-end-line="197" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6705#6713#0" expanded="true" />
                 <element signature="method#vlidate#0;class#MySampleApplication#0" />
               </folding>
             </state>
@@ -40,28 +41,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/MySampleApplication.html">
+        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/BookssServiceAsync.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="136">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/MySampleApplication.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="128">
+              <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -69,41 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gwt1.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="151">
+              <caret line="64" column="32" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/BookssServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+            <state relative-caret-position="579">
+              <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,36 +98,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>docum</find>
-      <find>docu</find>
-      <find>compara</find>
-      <find>compar</find>
-      <find>DATAP</find>
-      <find>HANDL</find>
-      <find>clic</find>
-      <find>column</find>
-      <find>table</find>
-      <find>2</find>
-      <find>cell</find>
-      <find>celll</find>
-      <find>btnDelete</find>
-      <find>dele</find>
-      <find>add</find>
-      <find>doc</find>
-      <find>xml</find>
-      <find>singleSelectionModel</find>
       <find>dataProvider</find>
       <find>authorBook</find>
       <find>delet</find>
       <find>if</find>
-      <find>del</find>
       <find>row</find>
       <find>selectedBook</find>
       <find>gwt-Button</find>
       <find>gwt-TextBox</find>
-      <find>addSelectionChangeHandler</find>
       <find>TextBo</find>
       <find>but</find>
+      <find>lis</find>
+      <find>del</find>
+      <find>ndel</find>
+      <find>SingleSelectionModel</find>
+      <find>addSelectionChangeHandler</find>
+      <find>id</find>
+      <find>id</find>
+      <find>id</find>
+      <find>list</find>
+      <find>cli</find>
+      <find>singleSelectionModel</find>
+      <find>setSelectionModel</find>
+      <find>booksService</find>
+      <find>setse</find>
+      <find>listb</find>
+      <find>sing</find>
+      <find>clic</find>
+      <find>null</find>
+      <find>clickB</find>
+      <find>panel</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -203,15 +165,15 @@
         <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/Bookss.java" />
         <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/BookssServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java" />
-        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java" />
         <option value="$PROJECT_DIR$/gwt1.iml" />
         <option value="$PROJECT_DIR$/war/MySampleApplication.html" />
         <option value="$PROJECT_DIR$/war/MySampleApplication.css" />
         <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java" />
-        <option value="$PROJECT_DIR$/data.xml" />
-        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java" />
         <option value="$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java" />
+        <option value="$PROJECT_DIR$/data.xml" />
       </list>
     </option>
   </component>
@@ -227,9 +189,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="910" />
-    <option name="y" value="45" />
-    <option name="width" value="1021" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
@@ -440,7 +401,7 @@
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49443206" weight="0.3226152" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4988864" weight="0.32690248" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48552337" visible="true" weight="0.47052518" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48552337" visible="true" weight="0.22508039" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39871383" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -504,19 +465,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java</url>
-          <line>68</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java</url>
-          <line>42</line>
+          <line>25</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java</url>
-          <line>64</line>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -637,56 +598,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/AbstractHasData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="950" column="29" selection-start-line="950" selection-start-column="29" selection-end-line="950" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/MySampleApplication.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/SortBookService.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/SortBookServiceAsync.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/Bookss.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/BookssService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -697,24 +610,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/BookssServiceAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/SortBookId.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookServiceAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -726,16 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="244" selection-start-line="244" selection-end-line="244" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,10 +652,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/MySampleApplication.html">
+    <entry file="file://$PROJECT_DIR$/gwt1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/AddBookServiceAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -780,27 +693,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gwt1.iml">
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/MySampleApplication.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookService.java">
+    <entry file="jar://$USER_HOME$/Downloads/gwt-2.8.2/gwt-user.jar!/com/google/gwt/user/cellview/client/AbstractHasData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="17">
+          <caret line="916" column="9" lean-forward="true" selection-start-line="916" selection-start-column="9" selection-end-line="916" selection-end-column="9" />
+          <folding>
+            <element signature="e#29053#29054#0" expanded="true" />
+            <element signature="e#29098#29099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/Bookss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/DeleteBookServiceAsync.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/MySampleApplication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/BookssServiceAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -809,36 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/BookssServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#vlidate#0;class#MySampleApplication#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/AddBookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+        <state relative-caret-position="579">
+          <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -847,11 +794,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/server/DeleteBookServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="528">
+          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mySampleApplication/client/MySampleApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="197" column="101" lean-forward="true" selection-start-line="197" selection-start-column="101" selection-end-line="197" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6705#6713#0" expanded="true" />
+            <element signature="method#vlidate#0;class#MySampleApplication#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -8,5 +8,5 @@ import java.util.List;
 
 @RemoteServiceRelativePath("deleteBook")
 public interface DeleteBookService extends RemoteService {
-   List <Bookss> deleteBook( Bookss booksses, List<Bookss> list);
+   void deleteBook( Bookss booksses);
 }

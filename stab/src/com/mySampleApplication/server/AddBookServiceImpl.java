@@ -17,31 +17,35 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.Writer;
 
 public class AddBookServiceImpl extends RemoteServiceServlet implements AddBookService {
     @Override
     public void addBook(Bookss newBook) {
+      //  DocumentBuilder documentBuilder = null;
+
+        //    documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance("com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl", this.getClass().getClassLoader());
         DocumentBuilder documentBuilder = null;
         try {
-            documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            documentBuilder = dbf.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         }
         Document document = null;
         try {
-            document = documentBuilder.parse("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml");
+            document = documentBuilder.parse(new FileInputStream("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try {
 
-
-            Element root = document.getDocumentElement();
+        Element root = document.getDocumentElement();
             Element books = document.createElement("book");
             root.appendChild(books);
 
@@ -71,16 +75,21 @@ public class AddBookServiceImpl extends RemoteServiceServlet implements AddBookS
 
             //   }
             TransformerFactory factory = TransformerFactory.newInstance();
-            Transformer transformer = factory.newTransformer();
-            DOMSource domSource = new DOMSource(document);
-            StreamResult streamResult = new StreamResult(new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
-            // Result desc = new StreamResult(System.out);
-            transformer.transform(domSource, streamResult);
-
+        Transformer transformer = null;
+        try {
+            transformer = factory.newTransformer();
         } catch (TransformerConfigurationException e) {
             e.printStackTrace();
+        }
+        DOMSource domSource = new DOMSource(document);
+            StreamResult streamResult = new StreamResult(new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
+            // Result desc = new StreamResult(System.out);
+        try {
+            transformer.transform(domSource, streamResult);
         } catch (TransformerException e) {
             e.printStackTrace();
         }
+
+
     }
 }

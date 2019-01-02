@@ -27,7 +27,7 @@ public class MySampleApplication implements EntryPoint {
     private BookssServiceAsync booksService = GWT.create(BookssService.class);
     private static CellTable<Bookss> table;
     private static ArrayList<Bookss> books = new ArrayList<Bookss>();
-    private Button sortButton = new Button("Sort number of page");
+    private Button sortButton = new Button("Sort by after");
     Bookss clickBook = null;
     TextBox idTextBox = new TextBox();
     TextBox authorTextBox = new TextBox();

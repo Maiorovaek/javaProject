@@ -2,7 +2,7 @@ package com.mySampleApplication.client;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 
 public class Bookss implements Serializable {
 
@@ -88,19 +88,5 @@ public Bookss(){
 
 
 
-
-//
-//
-//
-//    public int compareTo(Bookss o) {
-//        if(o.getId() - this.getId() == 0){
-//            return 0;
-//        }
-//        if(o.getId() - this.getId()>0){
-//            return 1;
-//        }
-//        return -1;
-//    }
-//
-
 }
+

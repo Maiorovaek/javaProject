@@ -18,8 +18,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import java.util.List;
-
 public class DeleteBookServiceImpl extends RemoteServiceServlet implements DeleteBookService {
     @Override
     public void deleteBook(Bookss bookDel) {

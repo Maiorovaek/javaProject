@@ -18,9 +18,6 @@ import com.google.gwt.view.client.SingleSelectionModel;
 import java.util.*;
 
 
-/**
- * Entry point classes define <code>onModuleLoad()</code>
- */
 
 
 public class MySampleApplication implements EntryPoint {
@@ -30,7 +27,7 @@ public class MySampleApplication implements EntryPoint {
     private BookssServiceAsync booksService = GWT.create(BookssService.class);
     private static CellTable<Bookss> table;
     private static ArrayList<Bookss> books = new ArrayList<Bookss>();
-
+    private Button sortButton = new Button("Sort number of page");
     Bookss clickBook = null;
     TextBox idTextBox = new TextBox();
     TextBox authorTextBox = new TextBox();
@@ -136,7 +133,7 @@ public class MySampleApplication implements EntryPoint {
 
 
         pageColumn.setSortable(true);
-        idColumn.setSortable(true);
+
         ColumnSortEvent.ListHandler<Bookss> columnSortHandler = new ColumnSortEvent.ListHandler<>(list);
         columnSortHandler.setComparator(pageColumn, new Comparator<Bookss>() {
             @Override
@@ -198,7 +195,6 @@ public class MySampleApplication implements EntryPoint {
         final SingleSelectionModel<Bookss> singleSelectionModel = new SingleSelectionModel<Bookss>();
 
 
-
         SelectionChangeEvent.Handler tableHandler = new SelectionChangeEvent.Handler() {
             @Override
             public void onSelectionChange(SelectionChangeEvent event) {
@@ -220,18 +216,17 @@ public class MySampleApplication implements EntryPoint {
         singleSelectionModel.addSelectionChangeHandler(tableHandler);
         table.setSelectionModel(singleSelectionModel);
 
-
         panel.add(table);
         panel.add(btnAdd);
         panel.add(buttonprev);
         panel.add(button);
+        panel.add(sortButton);
 
         panel.add(btnDelete);
 
 
     }
 
-    private static final List<String> Items = new ArrayList<>();
 
     //автоматически вызывается при загрузке GWT-модуля
     public void onModuleLoad() {
@@ -241,7 +236,7 @@ public class MySampleApplication implements EntryPoint {
         btnAdd.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {
                 if (vlidate() == true) {
-                    // Window.alert("Book added successfully.");
+
                     Integer idField = Integer.parseInt(idTextBox.getText());
                     String authorField = authorTextBox.getText();
                     String nameBookField = nameBookTextBox.getText();
@@ -284,7 +279,7 @@ public class MySampleApplication implements EntryPoint {
 
                 int row = table.getKeyboardSelectedRow();
                 table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
-               // table.setSelectionModel(singleSelectionModel);
+
 
                 DeleteBookServiceAsync deleteBookServiceAsync = GWT.create(DeleteBookService.class);
                 if (clickBook != null) {
@@ -310,11 +305,8 @@ public class MySampleApplication implements EntryPoint {
                     });
 
 
-                  //  table.setSelectionModel(singleSelectionModel);
-//                pane.add(table);
-//
-//                RootPanel.get("bookList").add(mainPanel);
-                    Window.alert(clickBook + " delete!!!!!!!!!!!");
+
+                    Window.alert(clickBook.getNameBook() + " delete!!!!!!!!!!!");
                 } else {
                     Window.alert("select row in table");
                 }
@@ -323,14 +315,44 @@ public class MySampleApplication implements EntryPoint {
         });
 
 
+        sortButton.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+
+                SortedServiceAsync sortBookService = GWT.create(SortedService.class);
+
+                sortBookService.sortedBook(books, new AsyncCallback<ArrayList<Bookss>>() {
+                    @Override
+                    public void onFailure(Throwable caught) {
+                        Window.alert(caught.getMessage());
+                    }
+
+                    @Override
+                    public void onSuccess(ArrayList<Bookss> result) {
+                        books = result;
+
+                        table.removeFromParent();
+                        createTableNew(books);
+                        createPanel();
+                    }
+
+
+                });
+
+            }
+        });
+
 
     }
-
 
     private boolean vlidate() {
         boolean result = true;
 
         String message = "Please, enter all Field";
+        if (idTextBox.getText().isEmpty() | !isNumber(idTextBox.getText())) {
+            authorTextBox.setStyleName("field_error");
+            result = false;
+        }
         if (authorTextBox.getText().isEmpty()) {
             authorTextBox.setStyleName("field_error");
             result = false;
@@ -339,12 +361,12 @@ public class MySampleApplication implements EntryPoint {
             nameBookTextBox.setStyleName("field_error");
             result = false;
         }
-        if (numberPageTextBox.getText().isEmpty()) {
+        if (numberPageTextBox.getText().isEmpty() | !isNumber(numberPageTextBox.getText())) {
             numberPageTextBox.setStyleName("field_error");
             message = "Please, enter a number pages. Example, 200\n";
             result = false;
         }
-        if (yearTextBox.getText().isEmpty()) {
+        if (yearTextBox.getText().isEmpty() | !isNumber(yearTextBox.getText())) {
             yearTextBox.setStyleName("field_error");
             message = "Please, enter  year. Example, 2011\n";
             result = false;
@@ -354,6 +376,13 @@ public class MySampleApplication implements EntryPoint {
         }
 
         return result;
+    }
+
+    private boolean isNumber(String str) {
+        if (str.matches("[0-9]*")) {
+            return true;
+        }
+        return false;
     }
 
 

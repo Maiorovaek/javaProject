@@ -12,6 +12,10 @@
         <servlet-name>com.mySampleApplication.MySampleApplication DeleteBookService</servlet-name>
         <servlet-class>com.mySampleApplication.server.DeleteBookServiceImpl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>com.mySampleApplication.MySampleApplication SortedService</servlet-name>
+        <servlet-class>com.mySampleApplication.server.SortedServiceImpl</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>com.mySampleApplication.MySampleApplication BookssService</servlet-name>
@@ -25,6 +29,10 @@
     <servlet-mapping>
         <servlet-name>com.mySampleApplication.MySampleApplication DeleteBookService</servlet-name>
         <url-pattern>/MySampleApplication/deleteBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>com.mySampleApplication.MySampleApplication SortedService</servlet-name>
+        <url-pattern>/MySampleApplication/sorted</url-pattern>
     </servlet-mapping>
 
 </web-app>

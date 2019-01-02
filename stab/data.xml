@@ -13,7 +13,7 @@
         <id>2</id>
         <author>Marsel2</author>
         <nameBook>Book2</nameBook>
-        <page>200</page>
+        <page>20</page>
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
@@ -21,7 +21,7 @@
         <id>3</id>
         <author>Marsel3</author>
         <nameBook>Book3</nameBook>
-        <page>200</page>
+        <page>25</page>
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
@@ -30,7 +30,7 @@
         <id>4</id>
         <author>Marsel4</author>
         <nameBook>Book4</nameBook>
-        <page>200</page>
+        <page>15</page>
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
@@ -38,7 +38,7 @@
         <id>5</id>
         <author>Marsel5</author>
         <nameBook>Book5</nameBook>
-        <page>200</page>
+        <page>28</page>
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
@@ -46,24 +46,22 @@
         <id>6</id>
         <author>Author6</author>
         <nameBook>Name book6</nameBook>
-        <page>200</page>
+        <page>46</page>
         <year>2011</year>
         <date>Fri Dec 28 00:17:55 MSK 2018</date>
     </book>
     <book>
         <id>7</id>
         <author>Author7</author>
-        <nameBook>Name book7</nameBook>
-        <page>200</page>
+        <nameBook>Name book6</nameBook>
+        <page>46</page>
         <year>2011</year>
         <date>Fri Dec 28 00:17:55 MSK 2018</date>
     </book>
     
 
-
     
-
-
+    
     
     
 </books>

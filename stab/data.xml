@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><books library="MyLibrary">
+<?xml version="1.0" encoding="UTF-8"?>
+<books library="MyLibrary">
 
 
     <book>
@@ -54,30 +55,7 @@
     </book>
 
 
-    <book>
-        <id>10</id>
-        <author>fdbdv</author>
-        <nameBook>sdfsf</nameBook>
-        <page>2011</page>
-        <year>2012</year>
-        <date>Fri Jan 04 01:10:29 MSK 2019</date>
-    </book>
-    <book>
-        <id>8</id>
-        <author>fdbdv</author>
-        <nameBook>sdfsf</nameBook>
-        <page>2011</page>
-        <year>2012</year>
-        <date>Fri Jan 04 01:10:57 MSK 2019</date>
-    </book>
-    <book>
-        <id>9</id>
-        <author>fdbdv</author>
-        <nameBook>sdfsf</nameBook>
-        <page>2011</page>
-        <year>2012</year>
-        <date>Fri Jan 04 01:11:03 MSK 2019</date>
-    </book>
+
     <book>
         <id>10</id>
         <author>fdbdv</author>

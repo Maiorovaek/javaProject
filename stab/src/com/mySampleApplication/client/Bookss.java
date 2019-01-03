@@ -1,6 +1,7 @@
 package com.mySampleApplication.client;
 
 import java.io.Serializable;
+
 import java.util.Date;
 
 
@@ -16,8 +17,10 @@ public Bookss(){
     private  Integer year;
     private Date dateCreate;
 
+
     public void setId(int id) {
         this.id = id;
+
     }
 
     public void setAuthor(String author) {

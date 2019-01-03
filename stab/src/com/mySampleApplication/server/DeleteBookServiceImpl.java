@@ -21,7 +21,7 @@ import java.io.IOException;
 public class DeleteBookServiceImpl extends RemoteServiceServlet implements DeleteBookService {
     @Override
     public void deleteBook(Bookss bookDel) {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance("com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl", this.getClass().getClassLoader());
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance("com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl", this.getClass().getClassLoader());
         DocumentBuilder db = null;
         try {
             db = dbf.newDocumentBuilder();
@@ -44,29 +44,29 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
         //  String yearBook = bookDel.getNameBook();
 
 
-            NodeList bookList = document.getElementsByTagName("book");
+        NodeList bookList = document.getElementsByTagName("book");
 
-            for (int i = 0; i < bookList.getLength(); i++) {
+        for (int i = 0; i < bookList.getLength(); i++) {
 
-                Element bookNode = (Element) bookList.item(i);
+            Element bookNode = (Element) bookList.item(i);
 //id , authorB, nameB, pageB, yearB, dateB
-                Element idB = (Element) bookNode.getElementsByTagName("id").item(0);
-                Element authorB = (Element) bookNode.getElementsByTagName("author").item(0);
-                Element nameB = (Element) bookNode.getElementsByTagName("nameBook").item(0);
+            Element idB = (Element) bookNode.getElementsByTagName("id").item(0);
+            Element authorB = (Element) bookNode.getElementsByTagName("author").item(0);
+            Element nameB = (Element) bookNode.getElementsByTagName("nameBook").item(0);
             //    Element pageB = (Element) bookNode.getElementsByTagName("page").item(0);
-              //  Element yearB = (Element) bookNode.getElementsByTagName("year").item(0);
-          //      Element dateB = (Element) bookNode.getElementsByTagName("date").item(0);
+            //  Element yearB = (Element) bookNode.getElementsByTagName("year").item(0);
+            //      Element dateB = (Element) bookNode.getElementsByTagName("date").item(0);
 
-                Integer pId = Integer.valueOf(idB.getTextContent());
-                String pAuthor = authorB.getTextContent();
-                String pName = nameB.getTextContent();
-           //     Integer pPages = Integer.valueOf(pageB.getTextContent());
+            Integer pId = Integer.valueOf(idB.getTextContent());
+            String pAuthor = authorB.getTextContent();
+            String pName = nameB.getTextContent();
+            //     Integer pPages = Integer.valueOf(pageB.getTextContent());
             //    Integer pYear = Integer.valueOf(yearB.getTextContent());
 
-                if (/*pId.equals(idBook) &&*/ pAuthor.equals(authorBook) && pName.equals(nameBook)/*&& pPages.equals(pageBook) && pYear.equals(yearBook)*/) {
-                    bookNode.getParentNode().removeChild(bookNode);
-                }
+            if (/*pId.equals(idBook) &&*/ pAuthor.equals(authorBook) && pName.equals(nameBook)/*&& pPages.equals(pageBook) && pYear.equals(yearBook)*/) {
+                bookNode.getParentNode().removeChild(bookNode);
             }
+        }
 
         Transformer transformer = null;
         try {
@@ -75,7 +75,7 @@ public class DeleteBookServiceImpl extends RemoteServiceServlet implements Delet
             e.printStackTrace();
         }
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            DOMSource domSource = new DOMSource(document);
+        DOMSource domSource = new DOMSource(document);
         StreamResult streamResult = new StreamResult(new File("C:\\Users\\AlexKate\\Desktop\\examples\\stab\\data.xml"));
 
         try {

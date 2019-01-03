@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><books library="MyLibrary">
 
+
     <book>
         <id>1</id>
         <author>Marsel1</author>
@@ -42,26 +43,47 @@
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
-    <book>
-        <id>6</id>
-        <author>Author6</author>
-        <nameBook>Name book6</nameBook>
-        <page>46</page>
-        <year>2011</year>
-        <date>Fri Dec 28 00:17:55 MSK 2018</date>
-    </book>
+
     <book>
         <id>7</id>
         <author>Author7</author>
-        <nameBook>Name book6</nameBook>
-        <page>46</page>
+        <nameBook>Name book7</nameBook>
+        <page>31</page>
         <year>2011</year>
         <date>Fri Dec 28 00:17:55 MSK 2018</date>
     </book>
-    
 
-    
-    
-    
-    
+
+    <book>
+        <id>10</id>
+        <author>fdbdv</author>
+        <nameBook>sdfsf</nameBook>
+        <page>2011</page>
+        <year>2012</year>
+        <date>Fri Jan 04 01:10:29 MSK 2019</date>
+    </book>
+    <book>
+        <id>8</id>
+        <author>fdbdv</author>
+        <nameBook>sdfsf</nameBook>
+        <page>2011</page>
+        <year>2012</year>
+        <date>Fri Jan 04 01:10:57 MSK 2019</date>
+    </book>
+    <book>
+        <id>9</id>
+        <author>fdbdv</author>
+        <nameBook>sdfsf</nameBook>
+        <page>2011</page>
+        <year>2012</year>
+        <date>Fri Jan 04 01:11:03 MSK 2019</date>
+    </book>
+    <book>
+        <id>10</id>
+        <author>fdbdv</author>
+        <nameBook>sdfsf</nameBook>
+        <page>2011</page>
+        <year>2012</year>
+        <date>Fri Jan 04 01:11:06 MSK 2019</date>
+    </book>
 </books>

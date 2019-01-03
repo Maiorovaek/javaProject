@@ -18,8 +18,6 @@ import com.google.gwt.view.client.SingleSelectionModel;
 import java.util.*;
 
 
-
-
 public class MySampleApplication implements EntryPoint {
 
     //вызов сервлета на стороне клиента: создание объекта сервиса
@@ -27,9 +25,9 @@ public class MySampleApplication implements EntryPoint {
     private BookssServiceAsync booksService = GWT.create(BookssService.class);
     private static CellTable<Bookss> table;
     private static ArrayList<Bookss> books = new ArrayList<Bookss>();
-    private Button sortButton = new Button("Sort by after");
+    private Button sortButton = new Button("Sort by author");
     Bookss clickBook = null;
-    TextBox idTextBox = new TextBox();
+    //    TextBox idTextBox = new TextBox();
     TextBox authorTextBox = new TextBox();
     TextBox nameBookTextBox = new TextBox();
     TextBox numberPageTextBox = new TextBox();
@@ -38,7 +36,11 @@ public class MySampleApplication implements EntryPoint {
     Button btnDelete = new Button("Delete book");
     Button button = new Button("Next page");
     Button buttonprev = new Button("Previous page");
-
+    Label idLabel = new Label("Id");
+    Label authorLabel = new Label("Author");
+    Label nameBookLabel = new Label("Name book");
+    Label numberPageLabel = new Label("Number of page");
+    Label yearofpublication = new Label("Year of publication");
 
     //Вызов методов сервиса с обработкой результатов в объекте AsyncCallback<Bookss>
     private class MessageCallBack implements AsyncCallback<ArrayList<Bookss>> {
@@ -132,65 +134,44 @@ public class MySampleApplication implements EntryPoint {
         dataProvider.refresh();
 
 
-        pageColumn.setSortable(true);
-
-        ColumnSortEvent.ListHandler<Bookss> columnSortHandler = new ColumnSortEvent.ListHandler<>(list);
-        columnSortHandler.setComparator(pageColumn, new Comparator<Bookss>() {
-            @Override
-            public int compare(Bookss o1, Bookss o2) {
-                if (o1 == o2) {
-                    return 0;
-                }
-                if (o1 != null) {
-                    return (o2 != null) ? new Integer(o1.getNumberPages()).compareTo(o2.getNumberPages()) : 1;
-
-                }
-                return -1;
-            }
-        });
-        table.addColumnSortHandler(columnSortHandler);
+//        pageColumn.setSortable(true);
+//
+//        ColumnSortEvent.ListHandler<Bookss> columnSortHandler = new ColumnSortEvent.ListHandler<>(list);
+//        columnSortHandler.setComparator(pageColumn, new Comparator<Bookss>() {
+//            @Override
+//            public int compare(Bookss o1, Bookss o2) {
+//                if (o1 == o2) {
+//                    return 0;
+//                }
+//                if (o1 != null) {
+//                    return (o2 != null) ? new Integer(o1.getNumberPages()).compareTo(o2.getNumberPages()) : 1;
+//
+//                }
+//                return -1;
+//            }
+//        });
+        // table.addColumnSortHandler(columnSortHandler);
 
 
         table.setRowData(books);
-        table.setPageSize(10);
-
-        button.addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                int start = table.getVisibleRange().getStart();
-                int pageSize = table.getPageSize();
-                start = start + pageSize;
-                table.setRowData(books);
-                table.setVisibleRange(start, pageSize);
-            }
-        });
-
-        buttonprev.addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                int end = table.getVisibleRange().getLength();
-                int pageSize = table.getPageSize();
-                end = end - pageSize;
-                table.setRowData(books);
-                table.setVisibleRange(end, pageSize);
-            }
-        });
+        // table.setPageSize(5);
 
     }
 
     public void createPanel() {
-        idTextBox.setText("id");
-        authorTextBox.setText("Author");
-        nameBookTextBox.setText("Name book");
-        numberPageTextBox.setText("Number of page");
-        yearTextBox.setText("Year of publication");
+
 
         final RootPanel panel = RootPanel.get("container");
         panel.getElement().getStyle().setPosition(Style.Position.ABSOLUTE);
-        panel.add(idTextBox);
+        // panel.add(idLabel);
+        // panel.add(idTextBox);
+        panel.add(authorLabel);
         panel.add(authorTextBox);
+        panel.add(nameBookLabel);
         panel.add(nameBookTextBox);
+        panel.add(numberPageLabel);
         panel.add(numberPageTextBox);
+        panel.add(yearofpublication);
         panel.add(yearTextBox);
         final SingleSelectionModel<Bookss> singleSelectionModel = new SingleSelectionModel<Bookss>();
 
@@ -218,8 +199,8 @@ public class MySampleApplication implements EntryPoint {
 
         panel.add(table);
         panel.add(btnAdd);
-        panel.add(buttonprev);
-        panel.add(button);
+//        panel.add(buttonprev);
+//        panel.add(button);
         panel.add(sortButton);
 
         panel.add(btnDelete);
@@ -235,9 +216,10 @@ public class MySampleApplication implements EntryPoint {
 
         btnAdd.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {
-                if (vlidate() == true) {
+                if (validate() == true) {
 
-                    Integer idField = Integer.parseInt(idTextBox.getText());
+
+                    Integer idField = books.size() + 1;
                     String authorField = authorTextBox.getText();
                     String nameBookField = nameBookTextBox.getText();
                     Integer numberPageFiled = Integer.parseInt(numberPageTextBox.getText());
@@ -260,7 +242,7 @@ public class MySampleApplication implements EntryPoint {
                             table.removeFromParent();
                             createTableNew(books);
                             createPanel();
-
+                            Window.alert("you added a book " + newBook1.getNameBook() + "!");
                         }
                     });
                 } else {
@@ -272,15 +254,10 @@ public class MySampleApplication implements EntryPoint {
 
 
         btnDelete.addClickHandler(new ClickHandler() {
-
             @Override
             public void onClick(ClickEvent event) {
-
-
                 int row = table.getKeyboardSelectedRow();
                 table.setKeyboardSelectionPolicy(HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.ENABLED);
-
-
                 DeleteBookServiceAsync deleteBookServiceAsync = GWT.create(DeleteBookService.class);
                 if (clickBook != null) {
                     deleteBookServiceAsync.deleteBook(clickBook, new AsyncCallback() {
@@ -293,20 +270,16 @@ public class MySampleApplication implements EntryPoint {
 
                         @Override
                         public void onSuccess(Object result) {
-
                             books.remove(row);
                             table.setRowData(row, books);
                             table.removeFromParent();
                             createTableNew(books);
                             createPanel();
                         }
-
-
                     });
 
 
-
-                    Window.alert(clickBook.getNameBook() + " delete!!!!!!!!!!!");
+                    Window.alert("You deleted the book" + clickBook.getNameBook() + "!");
                 } else {
                     Window.alert("select row in table");
                 }
@@ -330,29 +303,63 @@ public class MySampleApplication implements EntryPoint {
                     @Override
                     public void onSuccess(ArrayList<Bookss> result) {
                         books = result;
-
                         table.removeFromParent();
                         createTableNew(books);
                         createPanel();
                     }
-
-
                 });
 
             }
         });
 
 
+//
+//
+//
+//        button.addClickHandler(new ClickHandler() {
+//            @Override
+//            public void onClick(ClickEvent event) {
+//                int start = table.getVisibleRange().getStart();
+//                int pageSize = table.getPageSize();
+//                start = start + pageSize;
+//                table.setRowData(books);
+//                table.setVisibleRange(start, pageSize);
+//                PaginationServiceAsync paginationBook = GWT.create(PaginationService.class);
+//paginationBook.paginationBook(books, new AsyncCallback<ArrayList<Bookss>>() {
+//    @Override
+//    public void onFailure(Throwable caught) {
+//
+//    }
+//
+//    @Override
+//    public void onSuccess(ArrayList<Bookss> result) {
+//
+//    }
+//});
+//
+//
+//            }
+//        });
+//
+//        buttonprev.addClickHandler(new ClickHandler() {
+//            @Override
+//            public void onClick(ClickEvent event) {
+//                int end = table.getVisibleRange().getLength();
+//                int pageSize = table.getPageSize();
+//                end = end - pageSize;
+//                table.setRowData(books);
+//                table.setVisibleRange(end, pageSize);
+//            }
+//        });
+
+
     }
 
-    private boolean vlidate() {
+    private boolean validate() {
         boolean result = true;
 
         String message = "Please, enter all Field";
-        if (idTextBox.getText().isEmpty() | !isNumber(idTextBox.getText())) {
-            authorTextBox.setStyleName("field_error");
-            result = false;
-        }
+
         if (authorTextBox.getText().isEmpty()) {
             authorTextBox.setStyleName("field_error");
             result = false;
@@ -366,11 +373,12 @@ public class MySampleApplication implements EntryPoint {
             message = "Please, enter a number pages. Example, 200\n";
             result = false;
         }
-        if (yearTextBox.getText().isEmpty() | !isNumber(yearTextBox.getText())) {
+        if (yearTextBox.getText().isEmpty() | !isNumber(yearTextBox.getText()) | Integer.valueOf(yearTextBox.getText()) >= 2019) {
             yearTextBox.setStyleName("field_error");
             message = "Please, enter  year. Example, 2011\n";
             result = false;
         }
+
         if (result == false) {
             Window.alert(message);
         }

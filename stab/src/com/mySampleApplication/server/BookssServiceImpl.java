@@ -51,7 +51,7 @@ public class BookssServiceImpl extends RemoteServiceServlet implements BookssSer
             e.printStackTrace();
         }
 
-
+int ind =1;
         NodeList booksNodeList = document.getElementsByTagName("book");
         List<Bookss> bookssList = new ArrayList<>();
         for (int i = 0; i < booksNodeList.getLength(); i++) {
@@ -66,7 +66,10 @@ public class BookssServiceImpl extends RemoteServiceServlet implements BookssSer
 
                         switch (childElement.getNodeName()) {
                             case "id": {
-                                bookss.setId(Integer.parseInt(childElement.getTextContent()));
+
+                                bookss.setId(ind);
+                                ind++;
+
                             }
                             case "author": {
                                 bookss.setAuthor(childElement.getTextContent());

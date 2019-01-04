@@ -34,9 +34,7 @@ public class MySampleApplication implements EntryPoint {
     TextBox yearTextBox = new TextBox();
     Button btnAdd = new Button("Add book");
     Button btnDelete = new Button("Delete book");
-    Button button = new Button("Next page");
-    Button buttonprev = new Button("Previous page");
-    Label idLabel = new Label("Id");
+
     Label authorLabel = new Label("Author");
     Label nameBookLabel = new Label("Name book");
     Label numberPageLabel = new Label("Number of page");
@@ -131,30 +129,10 @@ public class MySampleApplication implements EntryPoint {
         }
 
 
-        dataProvider.refresh();
-
-
-//        pageColumn.setSortable(true);
-//
-//        ColumnSortEvent.ListHandler<Bookss> columnSortHandler = new ColumnSortEvent.ListHandler<>(list);
-//        columnSortHandler.setComparator(pageColumn, new Comparator<Bookss>() {
-//            @Override
-//            public int compare(Bookss o1, Bookss o2) {
-//                if (o1 == o2) {
-//                    return 0;
-//                }
-//                if (o1 != null) {
-//                    return (o2 != null) ? new Integer(o1.getNumberPages()).compareTo(o2.getNumberPages()) : 1;
-//
-//                }
-//                return -1;
-//            }
-//        });
-        // table.addColumnSortHandler(columnSortHandler);
+       // dataProvider.refresh();
 
 
         table.setRowData(books);
-        // table.setPageSize(5);
 
     }
 
@@ -163,8 +141,7 @@ public class MySampleApplication implements EntryPoint {
 
         final RootPanel panel = RootPanel.get("container");
         panel.getElement().getStyle().setPosition(Style.Position.ABSOLUTE);
-        // panel.add(idLabel);
-        // panel.add(idTextBox);
+
         panel.add(authorLabel);
         panel.add(authorTextBox);
         panel.add(nameBookLabel);
@@ -199,8 +176,6 @@ public class MySampleApplication implements EntryPoint {
 
         panel.add(table);
         panel.add(btnAdd);
-//        panel.add(buttonprev);
-//        panel.add(button);
         panel.add(sortButton);
 
         panel.add(btnDelete);
@@ -216,18 +191,21 @@ public class MySampleApplication implements EntryPoint {
 
         btnAdd.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {
-                if (validate() == true) {
 
 
-                    Integer idField = books.size() + 1;
+                setDefaultFieldStyle();
+                    Integer idField = Integer.valueOf(String.valueOf(books.size() + 1));
+                if (validate()) {
                     String authorField = authorTextBox.getText();
                     String nameBookField = nameBookTextBox.getText();
                     Integer numberPageFiled = Integer.parseInt(numberPageTextBox.getText());
                     Integer yearField = Integer.parseInt(yearTextBox.getText());
 
+
                     final Bookss newBook1 = new Bookss(idField, authorField, nameBookField, numberPageFiled, yearField, new Date());
 
                     AddBookServiceAsync addBookService = GWT.create(AddBookService.class);
+
                     addBookService.addBook(newBook1, new AsyncCallback() {
                         @Override
                         public void onFailure(Throwable caught) {
@@ -237,18 +215,20 @@ public class MySampleApplication implements EntryPoint {
 
                         @Override
                         public void onSuccess(Object result) {
+                                books.add(newBook1);
+                                table.removeFromParent();
+                                createTableNew(books);
+                                createPanel();
+                                Window.alert("you added a book " + newBook1.getNameBook() + "!");
+                                authorTextBox.setText("");
+                                nameBookTextBox.setText("");
+                                numberPageTextBox.setText("");
+                                yearTextBox.setText("");
 
-                            books.add(newBook1);
-                            table.removeFromParent();
-                            createTableNew(books);
-                            createPanel();
-                            Window.alert("you added a book " + newBook1.getNameBook() + "!");
                         }
                     });
-                } else {
-                    Window.alert("Please, enter filL");
-
                 }
+
             }
         });
 
@@ -306,6 +286,8 @@ public class MySampleApplication implements EntryPoint {
                         table.removeFromParent();
                         createTableNew(books);
                         createPanel();
+
+
                     }
                 });
 
@@ -313,78 +295,8 @@ public class MySampleApplication implements EntryPoint {
         });
 
 
-//
-//
-//
-//        button.addClickHandler(new ClickHandler() {
-//            @Override
-//            public void onClick(ClickEvent event) {
-//                int start = table.getVisibleRange().getStart();
-//                int pageSize = table.getPageSize();
-//                start = start + pageSize;
-//                table.setRowData(books);
-//                table.setVisibleRange(start, pageSize);
-//                PaginationServiceAsync paginationBook = GWT.create(PaginationService.class);
-//paginationBook.paginationBook(books, new AsyncCallback<ArrayList<Bookss>>() {
-//    @Override
-//    public void onFailure(Throwable caught) {
-//
-//    }
-//
-//    @Override
-//    public void onSuccess(ArrayList<Bookss> result) {
-//
-//    }
-//});
-//
-//
-//            }
-//        });
-//
-//        buttonprev.addClickHandler(new ClickHandler() {
-//            @Override
-//            public void onClick(ClickEvent event) {
-//                int end = table.getVisibleRange().getLength();
-//                int pageSize = table.getPageSize();
-//                end = end - pageSize;
-//                table.setRowData(books);
-//                table.setVisibleRange(end, pageSize);
-//            }
-//        });
-
-
     }
 
-    private boolean validate() {
-        boolean result = true;
-
-        String message = "Please, enter all Field";
-
-        if (authorTextBox.getText().isEmpty()) {
-            authorTextBox.setStyleName("field_error");
-            result = false;
-        }
-        if (nameBookTextBox.getText().isEmpty()) {
-            nameBookTextBox.setStyleName("field_error");
-            result = false;
-        }
-        if (numberPageTextBox.getText().isEmpty() | !isNumber(numberPageTextBox.getText())) {
-            numberPageTextBox.setStyleName("field_error");
-            message = "Please, enter a number pages. Example, 200\n";
-            result = false;
-        }
-        if (yearTextBox.getText().isEmpty() | !isNumber(yearTextBox.getText()) | Integer.valueOf(yearTextBox.getText()) >= 2019) {
-            yearTextBox.setStyleName("field_error");
-            message = "Please, enter  year. Example, 2011\n";
-            result = false;
-        }
-
-        if (result == false) {
-            Window.alert(message);
-        }
-
-        return result;
-    }
 
     private boolean isNumber(String str) {
         if (str.matches("[0-9]*")) {
@@ -393,5 +305,42 @@ public class MySampleApplication implements EntryPoint {
         return false;
     }
 
+
+
+
+    private boolean validate() {
+        boolean result = true;
+        String alert = "Please fill fields. \n";
+        if(authorTextBox.getText().isEmpty()) {
+            authorTextBox.setStyleName("status-error");
+            result = false;
+        }
+        if(nameBookTextBox.getText().isEmpty()) {
+            nameBookTextBox.setStyleName("status-error");
+            result = false;
+        }
+        if(numberPageTextBox.getText().isEmpty()||!isNumber(numberPageTextBox.getText())) {
+            numberPageTextBox.setStyleName("status-error");
+            alert += "Please, enter a number at Pages Field.\n";
+            result = false;
+        }
+        if(yearTextBox.getText().isEmpty() ||  !isNumber(yearTextBox.getText()) || Integer.valueOf(yearTextBox.getText()) > 2019 ) {
+            yearTextBox.setStyleName("status-error");
+            alert += "Please, enter a number at Year Field.\n";
+            result = false;
+        }
+        if(result == false) {
+            Window.alert(alert);
+        }
+
+        return result;
+
+    }
+    private void setDefaultFieldStyle() {
+        authorTextBox.setStyleName("status-ok");
+        nameBookTextBox.setStyleName("status-ok");
+        numberPageTextBox.setStyleName("status-ok");
+        yearTextBox.setStyleName("status-ok");
+    }
 
 }

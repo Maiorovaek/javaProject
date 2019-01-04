@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<books library="MyLibrary">
+<?xml version="1.0" encoding="UTF-8"?><books library="MyLibrary">
 
 
     <book>
@@ -11,14 +10,7 @@
         <date>2014,2,11</date>
     </book>
 
-    <book>
-        <id>2</id>
-        <author>Marsel2</author>
-        <nameBook>Book2</nameBook>
-        <page>20</page>
-        <year>2005</year>
-        <date>2014,2,11</date>
-    </book>
+    
     <book>
         <id>3</id>
         <author>Marsel3</author>
@@ -36,32 +28,39 @@
         <year>2005</year>
         <date>2014,2,11</date>
     </book>
-    <book>
-        <id>5</id>
-        <author>Marsel5</author>
-        <nameBook>Book5</nameBook>
-        <page>28</page>
-        <year>2005</year>
-        <date>2014,2,11</date>
-    </book>
+    
 
-    <book>
-        <id>7</id>
-        <author>Author7</author>
-        <nameBook>Name book7</nameBook>
-        <page>31</page>
-        <year>2011</year>
-        <date>Fri Dec 28 00:17:55 MSK 2018</date>
-    </book>
+    
 
 
 
-    <book>
-        <id>10</id>
-        <author>fdbdv</author>
-        <nameBook>sdfsf</nameBook>
-        <page>2011</page>
-        <year>2012</year>
-        <date>Fri Jan 04 01:11:06 MSK 2019</date>
-    </book>
+    
+
+<book>
+<id>7</id>
+<author>Karl</author>
+<nameBook>New book</nameBook>
+<page>200</page>
+<year>2000</year>
+<date>Fri Jan 04 19:50:19 MSK 2019</date>
+</book>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </books>

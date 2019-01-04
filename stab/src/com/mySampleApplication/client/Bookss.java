@@ -3,6 +3,7 @@ package com.mySampleApplication.client;
 import java.io.Serializable;
 
 import java.util.Date;
+import java.util.Objects;
 
 
 public class Bookss implements Serializable {
@@ -89,7 +90,22 @@ public Bookss(){
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bookss bookss = (Bookss) o;
+        return Objects.equals(id, bookss.id) &&
+                Objects.equals(author, bookss.author) &&
+                Objects.equals(nameBook, bookss.nameBook) &&
+                Objects.equals(numberPages, bookss.numberPages) &&
+                Objects.equals(year, bookss.year) &&
+                Objects.equals(dateCreate, bookss.dateCreate);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, author, nameBook, numberPages, year, dateCreate);
+    }
 }
 

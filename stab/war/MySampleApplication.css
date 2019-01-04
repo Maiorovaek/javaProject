@@ -10,9 +10,7 @@ h1{
     text-align: center;
 }
 
-.field_error{
-border: 1px red;
-}
+
 
 .gwt-TextBox{
     size: 15px;
@@ -20,6 +18,12 @@ border: 1px red;
     border: 1px solid #c8cacd;
     border-radius: 5px;
     background: #f7fbfc;
+}
+.status-error{
+    border-color: red;
+}
+.status-ok{
+    background-color: transparent;
 }
 
 /*.gwt-Button {*/

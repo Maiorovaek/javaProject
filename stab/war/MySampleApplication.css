@@ -18,12 +18,22 @@ h1{
     border: 1px solid #c8cacd;
     border-radius: 5px;
     background: #f7fbfc;
+
 }
 .status-error{
     border-color: red;
 }
 .status-ok{
     background-color: transparent;
+}
+#container{
+    margin: 0 auto;
+    max-width: 1024px;
+    position: static !important;
+}
+.tableCell{
+    text-align: center;
+    margin: 0 auto;
 }
 
 /*.gwt-Button {*/

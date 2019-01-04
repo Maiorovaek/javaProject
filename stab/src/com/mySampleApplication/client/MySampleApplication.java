@@ -24,6 +24,7 @@ public class MySampleApplication implements EntryPoint {
     //final - кэширование объекта сервиса для предотвращения его повторного создания при многократных вызовах сервиса
     private BookssServiceAsync booksService = GWT.create(BookssService.class);
     private static CellTable<Bookss> table;
+
     private static ArrayList<Bookss> books = new ArrayList<Bookss>();
     private Button sortButton = new Button("Sort by author");
     Bookss clickBook = null;
@@ -175,6 +176,7 @@ public class MySampleApplication implements EntryPoint {
         table.setSelectionModel(singleSelectionModel);
 
         panel.add(table);
+        table.setStyleName("tableCell");
         panel.add(btnAdd);
         panel.add(sortButton);
 

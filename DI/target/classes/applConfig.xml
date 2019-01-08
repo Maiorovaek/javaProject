@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="booksNew" class="services.BooksCollection">
+        <constructor-arg name="bookList">
+            <list>
+                <value>List Value A</value>
+                <value>List Value B</value>
+            </list>
+
+        </constructor-arg>
+        <constructor-arg name="bookSet">
+            <set>
+                <value>Set Book A</value>
+                <value>Set Book B</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg name="bookMap">
+            <map>
+                <entry key="0" value="Map Value A"/>
+                <entry key="1" value="Map Value B"/>
+            </map>
+
+        </constructor-arg>
+
+    </bean>
+</beans>

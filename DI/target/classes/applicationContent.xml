@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="twitter" class="services.TwitterService"></bean>
+
+    <!--<bean id="MyXMLApp" class="consumer.MyXMLApplication">-->
+        <!--<property name="service" ref="twitter"></property>-->
+    <!--</bean>-->
+
+    <bean id="MyXMLApp" class="consumer.MyXMLApplication">
+        <constructor-arg>
+            <bean class="services.TwitterService"/>
+        </constructor-arg>
+    </bean>
+
+
+
+
+
+
+    <bean id="booksNew" class="services.BooksCollection">
+        <property name="bookList">
+            <list>
+                <value>Book A</value>
+                <value>Book B</value>
+            </list>
+
+
+        </property>
+        <property name="bookSet">
+            <set>
+            <value>Set Book A</value>
+            <value>Set Book B</value>
+            </set>
+        </property>
+        <property name="bookMap">
+            <map>
+                <entry key="1" value="BookMap1"></entry>
+                <entry key="2" value="BookMap2"></entry>
+                <entry key="3" value="BookMap3"></entry>
+            </map>
+        </property>
+
+
+
+
+    </bean>
+
+
+
+
+<bean id="parrentTriangle" class="services.Triangle">
+<property name="pointA" ref="pointA"></property>
+</bean>
+    <bean id="triangle1" class="services.Triangle" parent="parrentTriangle">
+        <!--<property name="pointA" ref="pointA"></property>-->
+        <property name="pointB" ref="pointB"></property>
+        <property name="pointC" ref="pointC"></property>
+
+    </bean>
+    <bean id="triangle2" class="services.Triangle" parent="parrentTriangle">
+        <!--<property name="pointA" ref="pointA"></property>-->
+        <property name="pointB" ref="pointB"></property>
+        <!--<property name="pointC" ref="pointC"></property>-->
+
+    </bean>
+
+    <bean id="pointA" class="services.Point">
+        <property name="x" value="0"></property>
+        <property name="y" value="0"></property>
+    </bean>
+    <bean id="pointB" class="services.Point">
+        <property name="x" value="-20"></property>
+        <property name="y" value="0"></property>
+    </bean>
+    <bean id="pointC" class="services.Point">
+        <property name="x" value="20"></property>
+        <property name="y" value="0"></property>
+    </bean>
+
+
+
+
+<bean id="SimpleConfig" class="services.SpEL.SimpleConfig" scope="prototype"></bean>
+    <bean id="beanSpEL" class="services.SpEL.BeanSpeL" scope="prototype">
+        <property name="age" value="#{SimpleConfig.age}"/>
+       <property name="name" value="#{SimpleConfig.name}"/>
+    </bean>
+
+
+
+    <bean id="circle" class="services.Circle">
+        <property name="center" ref="pointA"></property>
+    </bean>
+
+
+</beans>

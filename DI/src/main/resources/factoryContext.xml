@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="atm" class="services.factory.ATM">
+        <property name="book" ref="bookFactory"></property>
+    </bean>
+    <bean id="bookFactory" class="services.factory.BookFactory" factory-method="getBook"></bean>
+
+    <!--<bean id="bookNew" factory-bean="bookFactory" factory-method="bookInformation">-->
+
+    <!--</bean>-->
+    <bean id="serviceFactoryNew" class="services.factory.BookFactory" factory-method="createInstance">
+
+    </bean>
+
+<bean id="bookATM" factory-bean="serviceFactoryNew" factory-method="createATMService"></bean>
+</beans>

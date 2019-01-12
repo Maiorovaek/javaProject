@@ -13,7 +13,7 @@ import java.util.List;
 
 @Repository("bookDAO")
 @Transactional
-public class BookDAOImpl extends AppDAO implements IBookDAO {
+public class BookDAOImpl extends AppDAO implements BookDAO {
 
 
     @Override
@@ -36,7 +36,6 @@ public class BookDAOImpl extends AppDAO implements IBookDAO {
         Criteria criteria = getSession().createCriteria(Books.class);
         criteria.setFetchMode("purchase", FetchMode.JOIN);
         return criteria.list();
-
     }
 
     @Override

@@ -26,6 +26,21 @@ public class Books {
     @Column(name = "quantity", nullable = false)
     private int quantity;
 
+    @OneToMany(mappedBy = "books", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Purchase> purchase = new HashSet<>();
+
+
+    public Set<Purchase> getPurchases() {
+        return purchase;
+    }
+
+    public void setPurchases(Set<Purchase> purchase) {
+        this.purchase = purchase;
+    }
+
+
+
+
 
     public Books(String name_book, Double price, String stock, Integer quantity) {
 
@@ -90,15 +105,5 @@ public class Books {
                 ", quantity=" + quantity +
                 '}';
     }
-//
-//    @OneToMany(mappedBy = "books", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-//    private Set<Purchase> purchase = new HashSet<>();
-//
-//    public Set<Purchase> getPurchase() {
-//        return purchase;
-//    }
-//
-//    public void setPurchases(Set<Purchase> purchase) {
-//        this.purchase = purchase;
-//    }
+
 }

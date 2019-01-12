@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Service(value="customerService")
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 @Autowired
     CustomerDAO customerDAO;

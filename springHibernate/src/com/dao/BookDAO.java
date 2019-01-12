@@ -1,19 +1,25 @@
-package com.service;
+package com.dao;
 
 import com.model.Books;
 
 import java.util.List;
-import java.util.Map;
 
-
-public interface BookService {
+public interface BookDAO {
     void bookByIdDelete(int id);
-    Books updateBookById(int id, String name);
+
+    Books updateBookById(int id, String title);
+
     void addBook(Books book);
+
     List<Books> allBooks();
+
     long getBooksCount();
+
     Books findBookByID(int bookId);
+
     List<Books> getSpecialBooks();
-    void getDataAboutBougthBook();
-    Map<String, Double> getAllTitleAndCost();
+
+    List getDataAboutBougthBook();
+
+
 }

@@ -3,7 +3,6 @@ package com.dao;
 import com.model.Customer;
 
 import java.util.List;
-import java.util.Set;
 
 public interface CustomerDAO {
     void customerByIdDelete(int id);

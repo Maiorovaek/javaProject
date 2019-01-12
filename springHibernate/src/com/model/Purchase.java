@@ -47,14 +47,14 @@ public class Purchase {
 
     @ManyToOne
     @JoinColumn(name = "book", insertable = false, updatable = false)
-    private Books book;
+    private Books books;
 
-    public Books getBook() {
-        return book;
+    public Books getBooks() {
+        return books;
     }
 
-    public void setBook(Books book) {
-        this.book = book;
+    public void setBooks(Books books) {
+        this.books = books;
     }
 
     @ManyToOne
@@ -68,6 +68,8 @@ public class Purchase {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
+
 
     public int getNumberOder() {
         return numberOder;

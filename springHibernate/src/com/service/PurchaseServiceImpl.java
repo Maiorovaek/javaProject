@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-//@Service("purchaseService")
+@Service(value = "purchaseService")
 public class PurchaseServiceImpl implements  IPurchaseService {
 
 
@@ -77,11 +77,11 @@ public class PurchaseServiceImpl implements  IPurchaseService {
 
     @Override
     public Set<Integer> getPurchasedMonths() {
-        List<Purchase> purchases = purchaseDAO.allPurchase();
+        List<Purchase> purchase = purchaseDAO.allPurchase();
         Set<Integer> months = new HashSet<>();
 
-        for(Purchase purchase : purchases) {
-            months.add(purchase.getDate().getMonth());
+        for(Purchase purchase1 : purchase) {
+            months.add(purchase1.getDate().getMonth());
         }
 
         return months;

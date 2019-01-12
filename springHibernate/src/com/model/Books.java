@@ -90,19 +90,15 @@ public class Books {
                 ", quantity=" + quantity +
                 '}';
     }
-
+//
 //    @OneToMany(mappedBy = "books", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 //    private Set<Purchase> purchase = new HashSet<>();
 //
 //    public Set<Purchase> getPurchase() {
 //        return purchase;
 //    }
-
-
-//    public void setPurchase(Set<Purchase> purchase) {
+//
+//    public void setPurchases(Set<Purchase> purchase) {
 //        this.purchase = purchase;
 //    }
-
-
-
 }

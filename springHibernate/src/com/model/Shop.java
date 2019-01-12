@@ -73,14 +73,14 @@ public class Shop {
         this.commision = commision;
     }
     @OneToMany(mappedBy = "shop", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Purchase> purchases = new HashSet<>();
+    private Set<Purchase> purchase = new HashSet<>();
 
     public Set<Purchase> getPurchases() {
-        return purchases;
+        return purchase;
     }
 
-    public void setPurchases(Set<Purchase> purchases) {
-        this.purchases = purchases;
+    public void setPurchases(Set<Purchase> purchase) {
+        this.purchase = purchase;
     }
 
 }

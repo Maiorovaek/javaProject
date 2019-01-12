@@ -5,9 +5,12 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
-
+@Repository("purchaseDAO")
+@Transactional
 public class PurchaseDAOImpl extends AppDAO implements IPurchaseDAO {
     @Override
     public void purchaseByIdDelete(int id) {

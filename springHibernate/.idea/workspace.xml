@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/model/Shop.java" line="86" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/model/Books.java" description="    @OneToMany(mappedBy = &quot;books&quot;, cascade = Casca..." line="93" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ac52d18-c71c-4af2-9343-0eda29bc0bb4" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="springHibernate" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/model/Books.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2072#2073#0" expanded="true" />
+                <element signature="e#2103#2104#0" expanded="true" />
+                <element signature="e#2199#2200#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/model/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-618">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1393#1394#0" expanded="true" />
+                <element signature="e#1437#1438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dao/IPurchaseDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="16" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/service/IPurchaseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/service/PurchaseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#707#708#0" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
+                <element signature="e#822#823#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dao/ShopDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/model/Purchase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/model/Shop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dao/IShopDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hibernate</find>
+      <find>actor</find>
+      <find>pric</find>
+      <find>hiber</find>
+      <find>hib</find>
+      <find>number</find>
+      <find>order</find>
+      <find>GenerationType</find>
+      <find>getName_book</find>
+      <find>inser</find>
+      <find>criter</find>
+      <find>shop</find>
+      <find>prop</find>
+      <find>coun</find>
+      <find>purchas</find>
+      <find>bookService</find>
+      <find>bookDAO</find>
+      <find>Purchase</find>
+      <find>pu</find>
+      <find>pur</find>
+      <find>purchases</find>
+      <find>purcha</find>
+      <find>dele</find>
+      <find>book</find>
+      <find>cus</find>
+      <find>boo</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\AlexKate\IdeaProjects\springHibernate\src</dir>
+      <dir>C:\Users\AlexKate\IdeaProjects\springHibernate</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/config/SpringConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/model/Books.java" />
+        <option value="$PROJECT_DIR$/springHibernate.iml" />
+        <option value="$PROJECT_DIR$/src/main/java/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/config/SpringConfig.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/model/Books.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/model/Shop.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/model/Purchase.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/service/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/dao/CustomerDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/dao/AppDAO.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/dao/CustomerDAO.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/dao/BookDAO.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/dao/BookDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/spring/service/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/config/SpringConfig.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/dao/AppDAO.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/dao/BookDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com.hibernatespring/MainController.java" />
+        <option value="$PROJECT_DIR$/src/com/MainController.java" />
+        <option value="$PROJECT_DIR$/src/com/service/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/com/dao/BookDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/src/com/config/SpringConfig.java" />
+        <option value="$PROJECT_DIR$/src/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/com/dao/IBookDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/BookDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/CustomerDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/com/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/com/service/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/CustomerDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/IShopDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/ShopDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/service/ShopServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/service/IShop.java" />
+        <option value="$PROJECT_DIR$/src/com/service/IBookService.java" />
+        <option value="$PROJECT_DIR$/src/com/model/Purchase.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/IPurchaseDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/PurchaseDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/service/PurchaseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/service/IPurchaseService.java" />
+        <option value="$PROJECT_DIR$/src/com/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/model/Books.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="springHibernate" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="514" />
+    <option name="y" value="92" />
+    <option name="width" value="1094" />
+    <option name="height" value="882" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springHibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springHibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547268340230" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/postgresql-42.2.5.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="spring.model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexKate\IdeaProjects\springHibernate\src" />
+      <recent name="C:\Users\AlexKate\IdeaProjects\springHibernate\src\com.hibernatespring" />
+      <recent name="C:\Users\AlexKate\IdeaProjects\springHibernate\src\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MainController">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="springHibernate" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Main" />
+      <module name="springHibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainController" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ac52d18-c71c-4af2-9343-0eda29bc0bb4" name="Default Changelist" comment="" />
+      <created>1547038494236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547038494236</updated>
+      <workItem from="1547038497537" duration="4672000" />
+      <workItem from="1547113904431" duration="11026000" />
+      <workItem from="1547125413861" duration="443000" />
+      <workItem from="1547125871123" duration="153000" />
+      <workItem from="1547126035143" duration="4124000" />
+      <workItem from="1547139859486" duration="3020000" />
+      <workItem from="1547193407240" duration="36113000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="59551000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Persistence" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.17910448" />
+      <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.17590618" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.17590618" />
+      <window_info anchor="bottom" id="Java Enterprise" order="0" weight="0.32936078" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3618635" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Spring" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.05970149" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Persistence" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49919224" visible="true" weight="0.18123667" />
+      <window_info id="Structure" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17590618" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" sideWeight="0.50080776" side_tool="true" weight="0.17590618" />
+      <window_info anchor="bottom" id="Java Enterprise" order="0" weight="0.32936078" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3618635" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Spring" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Messages" order="14" visible="true" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.06076759" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/dao/spring/Java.java" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6989a7b-a866-4a47-bee5-a32f22ff1317/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/model/Entity.java" />
+    <entry file="file://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.3.6.Final/hibernate-entitymanager-4.3.6.Final.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.jar!/org/hibernate/SessionFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/Table.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/Entity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/GenerationType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="207" column="9" selection-start-line="207" selection-start-column="9" selection-end-line="207" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.jar!/org/hibernate/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar!/org/springframework/context/annotation/ComponentScan.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f6989a7b-a866-4a47-bee5-a32f22ff1317/role/pg_write_server_files">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f6989a7b-a866-4a47-bee5-a32f22ff1317/role/pg_stat_scan_tables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f6989a7b-a866-4a47-bee5-a32f22ff1317/role/pg_signal_backend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f6989a7b-a866-4a47-bee5-a32f22ff1317/role/pg_read_all_stats">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f6989a7b-a866-4a47-bee5-a32f22ff1317/role/pg_execute_server_program">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar!/org/springframework/stereotype/Repository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springHibernate.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/config/HibernateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/config/SpringConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/AppDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/time/chrono/hijrah-config-islamic-umalqura.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/BookDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f6989a7b-a866-4a47-bee5-a32f22ff1317/role/postgres">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/CustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/CustomerDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="66" column="66" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/ShopServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/IShop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/IBookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/IBookDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/IShopDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/ShopDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/PurchaseDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/IPurchaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/PurchaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/IPurchaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/model/Books.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2072#2073#0" expanded="true" />
+            <element signature="e#2103#2104#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-618">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/model/Purchase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/model/Shop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>postgresql-42.2.5</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Hibernate|springHibernate</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>postgresql-42.2.5</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

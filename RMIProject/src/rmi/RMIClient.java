@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -41,7 +40,6 @@ public class RMIClient {
 
     private void mainLoop() throws IOException {
         char choice = 100;
-        //   while (choice != '0') {
         System.out.println("0. Exit");
         System.out.println("1. Get All Students");
         System.out.println("2. Add New Student");
@@ -159,8 +157,11 @@ public class RMIClient {
         System.out.print("Введите номер зачетной книжки ");
         String idg = in.next();
         Long ids = Long.valueOf(idg);
+        System.out.print("Введите обновленный балл");
 
-        Student studentUpdate = new Student(ids, "Maria", "Lokteva", Department.AppliedMathematics, 4);
+        String averageScore = in.next();
+        Double averageScoreD = Double.parseDouble(averageScore);
+        Student studentUpdate = new Student(ids, "Maria", "Lokteva", Department.AppliedMathematics, averageScoreD);
         collectiond.updateStudent(studentUpdate);
     }
 

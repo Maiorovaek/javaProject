@@ -100,13 +100,13 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
 
 
     @Override
-    public void removeStudent(long id) {
+    public void removeStudent(long id) throws RemoteException {
         studentList.removeIf(p -> p.getGradebookNumber() == (id));
 
     }
 
     @Override
-    public void updateStudent(Student s) {
+    public void updateStudent(Student s) throws RemoteException {
         for (Student t : studentList) {
             if (t.getGradebookNumber() == (s.getGradebookNumber())) {
                 System.out.println(t);

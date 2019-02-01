@@ -1,34 +1,27 @@
 package rmi.model;
 
 import java.io.Serializable;
-import java.util.Collections;
 import java.util.Objects;
 
-import static jdk.vm.ci.sparc.SPARC.o1;
-import static jdk.vm.ci.sparc.SPARC.o2;
 
-public class Student implements Serializable/*, Comparable<Student>*/ {
+public class Student implements Serializable {
 
-    private  long gradebookNumber;
+    private long gradebookNumber;
     private String name;
     private String surname;
-    private  Department departmet;
+    private Department departmet;
     private double averageScore;
 
-//    @Override
-//    public int compareTo(Student o) {
-//        return (this.getGradebookNumber() < o.getGradebookNumber() ) ? -1: (this.getGradebookNumber() > o.getGradebookNumber() ) ? 1:0;
-//    }
 
-
-    public enum Department{
-
+    public enum Department {
         AppliedMathematics,
         InformationalRadiosystems,
         Chemistry,
-        ForeignLanguages
+        ForeignLanguages;
+
 
     }
+
 
     public Student() {
     }
@@ -110,11 +103,6 @@ public class Student implements Serializable/*, Comparable<Student>*/ {
                 ", averageScore=" + averageScore +
                 '}';
     }
-
-
-
-
-
 
 
 }

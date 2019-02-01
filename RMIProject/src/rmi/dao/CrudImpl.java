@@ -4,20 +4,19 @@ import rmi.model.Student;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-
-import java.util.List;
-
+import java.util.*;
 
 public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
     private List<Student> studentList;
 
     public CrudImpl() throws RemoteException {
         studentList = new ArrayList<>();
-        studentList.add(new Student(1, "Alex", "Stasov", Student.Department.AppliedMathematics, 5.0));
-        studentList.add(new Student(4, "Andre", "Stasov", Student.Department.AppliedMathematics, 5.0));
-        studentList.add(new Student(2, "Anton", "Deverin", Student.Department.AppliedMathematics, 5.0));
-        studentList.add(new Student(3, "Dima", "Bozhenkinn", Student.Department.AppliedMathematics, 5.0));
+        studentList.add(new Student(1, "Alex", "Stasov", Student.Department.AppliedMathematics, 4.0));
+
+        studentList.add(new Student(2, "Anton", "Deverin", Student.Department.AppliedMathematics, 4.9));
+        studentList.add(new Student(3, "Anton", "Barsukov", Student.Department.InformationalRadiosystems, 4.5));
+        studentList.add(new Student(4, "Dima", "Bozhenkinn", Student.Department.AppliedMathematics, 4.2));
+        studentList.add(new Student(5, "Andre", "Stasov", Student.Department.AppliedMathematics, 4.4));
     }
 
 
@@ -49,73 +48,75 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
     }
 
     @Override
-    public List<Student> findByDepartment(Student.Department surname) throws RemoteException {
-        return null;
+    public List<Student> findByName(String name) throws RemoteException {
+        List<Student> res = new ArrayList<>();
+        for (Student s : studentList) {
+            if (s.getName().equals(name)) {
+                System.out.println(s);
+                res.add(s);
+            }
+        }
+        return res;
+    }
+
+    @Override
+    public List<Student> findByDepartment(Student.Department department) throws RemoteException {
+        List<Student> res = new ArrayList<Student>();
+
+        for (Student s : studentList) {
+            if (s.getDepartmet().equals(department)) {
+                System.out.println("Account found");
+                res.add(s);
+            } else {
+                System.out.println("Account not found");
+            }
+        }
+
+        return res;
     }
 
     @Override
     public Student findByGradebookNumber(long number) throws RemoteException {
-        return null;
+        Student res = new Student();
+        for (Student s : studentList) {
+            if (s.getGradebookNumber() == (number)) {
+                res = s;
+            }
+        }
+        return res;
     }
 
     @Override
     public List<Student> findWhosScoreGreater(double minScore) throws RemoteException {
-        return null;
+        List<Student> res = new ArrayList<>();
+        for (Student s : studentList) {
+            if (s.getAverageScore() >= (minScore)) {
+                System.out.println(s);
+                res.add(s);
+            }
+        }
+        return res;
     }
-
-
 
 
     @Override
-    public void removeStudent(String id) {
-
-//
-//        It works as expected,
-//
-//        Try checking IdeOneDemo
-//
-//        public static void main(String[] args) {
-//            long a = 1111;
-//            Long b = 1113l;
-//
-//            if (a == b) {
-//                System.out.println("Equals");
-//            } else {
-//                System.out.println("not equals");
-//            }
-//        }
-//        prints
-//
-//        not equals for me
-//
-//        Use compareTo() to compare Long, == wil not work in all case as far as the value is cached
-
-//        List<Student> res = new ArrayList<>();
-//        for (Student s : studentList) {
-//            if (s.getName().equals(id)) {
-//                res.add(s);
-//                System.out.println("Equals");
-//                studentList.remove(res);
-//
-//            } else {
-//                System.out.println("Not equals");
-//            }
-//        }
-//        return res;
-    }
-
-
-    public static void main(String[] args) throws RemoteException {
-
-        CrudImpl crud = new CrudImpl();
-        crud.addSt(new Student(8, "ggf", "fbdfb", Student.Department.AppliedMathematics, 25.0));
-        //crud.getAll();
-        crud.removeStudent("ggf");
-
-      //  crud.getAll();
-
+    public void removeStudent(long id) {
+        studentList.removeIf(p -> p.getGradebookNumber() == (id));
 
     }
 
-
+    @Override
+    public void updateStudent(Student s) {
+        for (Student t : studentList) {
+            if (t.getGradebookNumber() == (s.getGradebookNumber())) {
+                System.out.println(t);
+                t.setGradebookNumber(s.getGradebookNumber());
+                t.setAverageScore(s.getAverageScore());
+                t.setDepartmet(s.getDepartmet());
+                t.setName(s.getName());
+                t.setSurname(s.getSurname());
+                System.out.println(t);
+            }
+        }
+    }
 }

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="RMIProject">
+    <output-path>$PROJECT_DIR$/out/artifacts/RMIProject</output-path>
+    <root id="root">
+      <element id="archive" name="RMIProject.jar">
+        <element id="module-output" name="RMIProject" />
+      </element>
+    </root>
+  </artifact>
+</component>

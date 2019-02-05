@@ -1,29 +1,92 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<listStudents>
-    <student>
-        <id>1</id>
-        <name>Anton</name>
-        <surname>Deverin</surname>
-        <department>AppliedMathematics</department>
-        <averageScore>4.9</averageScore>
-    </student>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><listStudents>
 
 
     <student>
+
+
         <id>2</id>
-        <name>Dima</name>
-        <surname>Bozhenkin</surname>
+
+
+        <name>Anna</name>
+
+
+        <surname>Stasova</surname>
+
+
         <department>AppliedMathematics</department>
-        <averageScore>4.2</averageScore>
+
+
+        <averageScore>4.1</averageScore>
+
+
     </student>
 
 
     <student>
+
+
         <id>3</id>
+
+
         <name>Andre</name>
+
+
         <surname>Stasov</surname>
+
+
         <department>AppliedMathematics</department>
+
+
         <averageScore>4.4</averageScore>
+
+
     </student>
 
-</listStudents>
+
+    <student>
+
+
+        <id>4</id>
+
+
+        <name>Alexander</name>
+
+
+        <surname>Romanov</surname>
+
+
+        <department>Chemistry</department>
+
+
+        <averageScore>4.8</averageScore>
+
+
+    </student>
+
+
+    <student>
+        <id>5</id>
+        <name>Mark</name>
+        <surname>Panov</surname>
+        <department>Chemistry</department>
+        <averageScore>4.5</averageScore>
+    </student>
+
+
+    <student>
+        <id>6</id>
+        <name>Helen</name>
+        <surname>Kim</surname>
+        <department>ForeignLanguages</department>
+        <averageScore>4.5</averageScore>
+    </student>
+
+
+    <student>
+        <id>9</id>
+        <name>Alena</name>
+        <surname>Bolshakova</surname>
+        <department>InformationalRadiosystems</department>
+        <averageScore>5.0</averageScore>
+    </student>
+<student><id>1</id><name>Maksim</name><surname>Fetisov</surname><department>AppliedMathematics</department><averageScore>4.6</averageScore></student></listStudents>

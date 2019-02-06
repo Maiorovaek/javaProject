@@ -18,7 +18,6 @@ public class Student implements Serializable {
         InformationalRadiosystems,
         Chemistry,
         ForeignLanguages;
-
     }
 
 
@@ -102,6 +101,4 @@ public class Student implements Serializable {
                 ", averageScore=" + averageScore +
                 '}';
     }
-
-
 }

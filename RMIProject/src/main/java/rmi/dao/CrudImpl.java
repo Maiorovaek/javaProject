@@ -10,23 +10,15 @@ import java.util.*;
 public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
     private List<Student> studentList;
     private XMLParser xml = new XMLParser();
+
     public CrudImpl() throws RemoteException {
-
-        studentList =  xml.readListStudent();
-       // studentList = new ArrayList<>();
-      //  studentList.add(new Student(1, "Alex", "Stasov", Student.Department.AppliedMathematics, 4.0));
-
-       // studentList.add(new Student(2, "Anton", "Deverin", Student.Department.AppliedMathematics, 4.9));
-       // studentList.add(new Student(3, "Anton", "Barsukov", Student.Department.InformationalRadiosystems, 4.5));
-       // studentList.add(new Student(4, "Dima", "Bozhenkinn", Student.Department.AppliedMathematics, 4.2));
-       // studentList.add(new Student(5, "Andre", "Stasov", Student.Department.AppliedMathematics, 4.4));
+        studentList = xml.readListStudent();
     }
 
 
     @Override
     public void addSt(Student student) throws RemoteException {
-
-        studentList.add(student);
+       // studentList.add(student);
         xml.addStudent(student);
     }
 
@@ -104,9 +96,15 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
 
 
     @Override
-    public void removeStudent(long id) throws RemoteException {
-        studentList.removeIf(p -> p.getGradebookNumber() == (id));
-        xml.removeStudent(id);
+    public void removeStudent(long idt) throws RemoteException {
+       // studentList.removeIf(p -> p.getGradebookNumber() == (idt));
+       // xml.removeStudent(idt);
+        for (Student t : studentList) {
+
+            if(t.getGradebookNumber() == idt){
+                xml.removeStudent(idt);
+            }
+        }
     }
 
     @Override

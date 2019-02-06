@@ -14,7 +14,6 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +48,7 @@ public class XMLParser {
     }
 
     public ArrayList<Student> readListStudent() {
-        int ind = 1;
+       // int ind = 1;
         NodeList studentNodeList = document.getElementsByTagName("student");
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < studentNodeList.getLength(); i++) {
@@ -65,8 +64,8 @@ public class XMLParser {
                         switch (childElement.getNodeName()) {
                             case "id": {
 
-                                student.setGradebookNumber(ind);
-                                ind++;
+                                student.setGradebookNumber(Long.parseLong(childElement.getTextContent()));
+         //                       ind++;
 
                             }
                             case "name": {
@@ -142,17 +141,22 @@ public class XMLParser {
     }
 
 
-    public void removeStudent(Long idDelStudent) {
+    public void removeStudent(long idDelStudent) {
         NodeList studentList = document.getElementsByTagName("student");
+
         for (int i = 0; i < studentList.getLength(); i++) {
             Element studentNode = (Element) studentList.item(i);
-            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
-            Long pId = Long.valueOf(idB.getTextContent());
 
-            if (idDelStudent == pId) {
+            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
+            long pId = Long.parseLong(idB.getTextContent());
+
+
+            if (pId == idDelStudent  ) {
                 studentNode.getParentNode().removeChild(studentNode);
             }
         }
+
+
 
         Transformer transformer = null;
         try {

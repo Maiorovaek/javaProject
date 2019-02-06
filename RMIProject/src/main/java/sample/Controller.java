@@ -5,6 +5,8 @@ import javafx.beans.property.Property;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,11 +16,13 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.FlowPane;
+import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.NumberStringConverter;
 import rmi.XMLParser;
 import rmi.model.Student;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Controller {
 
@@ -44,18 +48,21 @@ public class Controller {
 
 
     @FXML
-    private TextField idField;
-    @FXML
+    private TextField idField, nameField, surnameField, avScoreField;
 
-    private TextField nameField;
+    //  nameSearchField, surnameSearchField, AvScFieldSearch,idSearchField,
     @FXML
-    private TextField surnameField;
+    private TextField searchField;
+
+
     @FXML
     private ComboBox<String> departmentField;
-    @FXML
-    private TextField avScoreField;
+
     ObservableList<String> langs;
-    Label lbl;
+    @FXML
+    private Label lbl;
+
+
     private final DoubleProperty avscDouble = new SimpleDoubleProperty();
 
 //    @FXML
@@ -69,15 +76,10 @@ public class Controller {
         langs = FXCollections.observableArrayList("AppliedMathematics", "InformationalRadiosystems", "Chemistry", "ForeignLanguages");
         tableUsers.setEditable(true);
         surnameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-
-
-
-
-
         departmentField.setItems(langs);
-
+        avScoreColumn.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
         lbl = new Label();
-        //  departmentField.setOnAction(event -> lbl.setText(departmentField.getValue()));
+
         // устанавливаем тип и значение которое должно хранится в колонке
         idColumn.setCellValueFactory(new PropertyValueFactory<Student, Long>("gradebookNumber"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
@@ -86,33 +88,39 @@ public class Controller {
         avScoreColumn.setCellValueFactory(new PropertyValueFactory<Student, Double>("averageScore"));
 
 
+        FilteredList<Student> filteredData = new FilteredList<Student>(studentList, e -> true);
+        searchField.setOnKeyReleased(e -> {
+            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredData.setPredicate((Predicate<? super Student>) student -> {
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+                    String lowerCaseFilter = newValue.toLowerCase();
+                    String high = String.valueOf(student.getGradebookNumber());
+                   if (student.getName().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    }
+                    else if (student.getSurname().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    }
+                    else if(high.toLowerCase().contains(lowerCaseFilter)){
+                        return true;
+                   }
+                    return false;
+                });
+            });
+
+            SortedList<Student> sortedList = new SortedList<>(filteredData);
+            sortedList.comparatorProperty().bind(tableUsers.comparatorProperty());
+            tableUsers.setItems(sortedList);
+
+        });
+
+
         // заполняем таблицу данными
         tableUsers.setItems(studentList);
-
-
     }
 
-
-    public void addRow() {
-
-        // get current position
-        TablePosition pos = tableUsers.getFocusModel().getFocusedCell();
-
-        // clear current selection
-        tableUsers.getSelectionModel().clearSelection();
-
-        // create new record and add it to the model
-        Student data = new Student();
-        tableUsers.getItems().add(data);
-
-        // get last row
-        int row = tableUsers.getItems().size() - 1;
-        tableUsers.getSelectionModel().select(row, pos.getTableColumn());
-
-        // scroll to new row
-        tableUsers.scrollTo(data);
-
-    }
 
     private void initData() {
         XMLParser xml = new XMLParser();
@@ -126,35 +134,36 @@ public class Controller {
     protected void addStudent(ActionEvent event) {
         studentList = tableUsers.getItems();
 
-        long idFieldLong = Long.parseLong(idField.getText());
+        if (validation()) {
+            long idFieldLong = Long.parseLong(idField.getText());
+            Student.Department dDepartment = Student.Department.valueOf(departmentField.getValue());
+            double avScoreDouble = Double.parseDouble(avScoreField.getText());
 
-        Student.Department dDepartment = Student.Department.valueOf(departmentField.getValue());
-        double avScoreDouble = Double.parseDouble(avScoreField.getText());
-        Student studentAdd = new Student(idFieldLong,
-                nameField.getText(),
-                surnameField.getText(),
-                dDepartment,
-                avScoreDouble);
-        studentList.add(studentAdd);
-        xmlParser.addStudent(studentAdd);
+            Student studentAdd = new Student(idFieldLong,
+                    nameField.getText(),
+                    surnameField.getText(),
+                    dDepartment,
+                    avScoreDouble);
+            studentList.add(studentAdd);
+
+            xmlParser.addStudent(studentAdd);
+        } else {
+            lbl.setText("INVALID");
+        }
         idField.setText("");
         nameField.setText("");
         surnameField.setText("");
 
         avScoreField.setText("");
-
     }
 
 
     @FXML
     protected void delStudent(ActionEvent event) {
 
-
         Student st = tableUsers.getSelectionModel().getSelectedItem();
         int row = tableUsers.getSelectionModel().getSelectedIndex();
         tableUsers.getItems().remove(row);
-     //   long gradebookNumberDel = tableUsers.getSelectionModel().getSelectedItem().getGradebookNumber();
-
         xmlParser.removeStudent(st.getGradebookNumber());
 
     }
@@ -163,17 +172,53 @@ public class Controller {
     public void onEditChange(TableColumn.CellEditEvent<Student, String> studentStringCellEditEvent) {
         Student student = tableUsers.getSelectionModel().getSelectedItem();
         student.setSurname(studentStringCellEditEvent.getNewValue());
-
+        xmlParser.updateStudent(student.getGradebookNumber(), student.getSurname());
     }
 
     public void onEditChangeAvSc(TableColumn.CellEditEvent<Student, Double> studentDoubleCellEditEvent) {
-        avScoreColumn.textProperty().bindBidirectional(avscDouble, new NumberStringConverter());
         Student student = tableUsers.getSelectionModel().getSelectedItem();
         student.setAverageScore(studentDoubleCellEditEvent.getNewValue());
-        double s = avscDouble.get();
-        long idGr = tableUsers.getSelectionModel().getSelectedItem().getGradebookNumber();
-
-        xmlParser.updateStudent(idGr,s);
+        xmlParser.updateStudentAv(student.getGradebookNumber(), student.getAverageScore());
     }
-}
 
+
+    private boolean validation() {
+
+        boolean result = true;
+        String alert = "Please fill fields. \n";
+        if (idField.getText() == (null)) {
+            System.out.println("invalid id");
+            // idField.setStyle();
+            // nameField.setStyleName("status-error");
+
+            result = false;
+        }
+        if (nameField.getText().equals(null)) {
+
+            String regex = "[A-Za-z\\s]+";
+            System.out.println("invalid name");
+            return nameField.getText().matches(regex);
+        }
+        if (surnameField.getText().isEmpty()) {
+
+            result = false;
+        }
+        if (departmentColumn.getText().isEmpty()/*||*//*!isNumber(numberPageTextBox.getText())*/) {
+
+            result = false;
+        }
+        if (avScoreField.getText().isEmpty() /*||  !isNumber(yearTextBox.getText()) || Integer.valueOf(yearTextBox.getText()) > 2019 */) {
+            result = false;
+        }
+        if (result == false) {
+            lbl.setText(alert);
+        }
+
+        return result;
+
+    }
+
+
+
+
+}

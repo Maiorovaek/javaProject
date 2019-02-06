@@ -1,47 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <listStudents>
-    <student>
-        <id>1</id>
-        <name>Kolya</name>
-        <surname>Somov</surname>
-        <department>AppliedMathematics</department>
-        <averageScore>4.8</averageScore>
-    </student>
-    <student>
-        <id>2</id>
-        <name>Kolya</name>
-        <surname>Somov</surname>
-        <department>AppliedMathematics</department>
-        <averageScore>4.8</averageScore>
-    </student>
 
 
-
-    <student>
-        <id>3</id>
-        <name>Kolya</name>
-        <surname>Somov</surname>
-        <department>AppliedMathematics</department>
-        <averageScore>4.8</averageScore>
-    </student>
-    
     <student>
         <id>4</id>
-        <name>E</name>
-        <surname>Maiorova</surname>
-        <department>InformationalRadiosystems</department>
-        <averageScore>4.6</averageScore>
+        <name>Allan</name>
+        <surname>Sokolov</surname>
+        <department>ForeignLanguages</department>
+        <averageScore>4.8</averageScore>
     </student>
-
     <student>
         <id>5</id>
-        <name>E</name>
-        <surname>Maiorova</surname>
+        <name>Julia</name>
+        <surname>Artamonova</surname>
         <department>InformationalRadiosystems</department>
-        <averageScore>4.6</averageScore>
+        <averageScore>4.2</averageScore>
     </student>
-    
 
-    
 
+
+<student>
+<id>1</id>
+<name>sdcsdc</name>
+<surname>sdcdsc</surname>
+<department>Chemistry</department>
+<averageScore>4.2</averageScore>
+</student>
+<student>
+<id>334</id>
+<name>vb</name>
+<surname>fchg</surname>
+<department>Chemistry</department>
+<averageScore>54746.0</averageScore>
+</student>
 </listStudents>

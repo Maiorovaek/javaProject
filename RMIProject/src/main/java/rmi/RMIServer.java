@@ -18,7 +18,7 @@ public class RMIServer {
             ((Registry) registry).bind("MyRemote", new CrudImpl());
             System.out.println("bound 'RMIServer'");
         } catch (Throwable cause) {
-            System.err.println("couldn't bind  cause " + cause.getMessage());
+            System.err.println("couldn't bind - cause " + cause.getMessage());
 
         }
     }

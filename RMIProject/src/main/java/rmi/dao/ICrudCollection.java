@@ -17,5 +17,7 @@ public interface ICrudCollection extends Remote {
     List<Student> findByDepartment(Student.Department department) throws RemoteException;
     Student findByGradebookNumber(long number) throws RemoteException;
     List<Student> findWhosScoreGreater(double minScore) throws RemoteException;
-    void updateStudent(long id, double s) throws RemoteException;
+    void updateStudent(long id, String surname) throws RemoteException;
+    void updateStudentAver(long id, double s) throws RemoteException;
+
 }

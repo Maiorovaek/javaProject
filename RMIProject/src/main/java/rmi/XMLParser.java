@@ -48,7 +48,7 @@ public class XMLParser {
     }
 
     public ArrayList<Student> readListStudent() {
-       // int ind = 1;
+        // int ind = 1;
         NodeList studentNodeList = document.getElementsByTagName("student");
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < studentNodeList.getLength(); i++) {
@@ -65,7 +65,7 @@ public class XMLParser {
                             case "id": {
 
                                 student.setGradebookNumber(Long.parseLong(childElement.getTextContent()));
-         //                       ind++;
+                                //                       ind++;
 
                             }
                             case "name": {
@@ -123,21 +123,7 @@ public class XMLParser {
         student.appendChild(averageScore);
 
 
-        TransformerFactory factory = TransformerFactory.newInstance();
-        Transformer transformer = null;
-        try {
-            transformer = factory.newTransformer();
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
-        }
-        DOMSource domSource = new DOMSource(document);
-        StreamResult streamResult = new StreamResult(new File(String.valueOf(file)));
-
-        try {
-            transformer.transform(domSource, streamResult);
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        }
+        transform();
     }
 
 
@@ -151,45 +137,52 @@ public class XMLParser {
             long pId = Long.parseLong(idB.getTextContent());
 
 
-            if (pId == idDelStudent  ) {
+            if (pId == idDelStudent) {
                 studentNode.getParentNode().removeChild(studentNode);
             }
         }
 
 
+        transform();
+    }
 
-        Transformer transformer = null;
-        try {
-            transformer = TransformerFactory.newInstance().newTransformer();
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
-        }
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        DOMSource domSource = new DOMSource(document);
-        StreamResult streamResult = new StreamResult(new File(String.valueOf(file)));
 
-        try {
-            transformer.transform(domSource, streamResult);
-        } catch (TransformerException e) {
-            e.printStackTrace();
+    public void updateStudent(long idUpdStudent, String surname/*double averageNewScore*/) {
+        NodeList studentList = document.getElementsByTagName("student");
+        for (int i = 0; i < studentList.getLength(); i++) {
+            Element studentNode = (Element) studentList.item(i);
+            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
+            Long pId = Long.parseLong(idB.getTextContent());
+
+            if (pId == idUpdStudent) {
+                // studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(averageNewScore));
+
+                studentNode.getElementsByTagName("surname").item(0).setTextContent(surname);
+            }
         }
+        transform();
+    }
+
+
+    public void updateStudentAv(long idUpdStudent, double averageNewScore) {
+        NodeList studentList = document.getElementsByTagName("student");
+        for (int i = 0; i < studentList.getLength(); i++) {
+            Element studentNode = (Element) studentList.item(i);
+            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
+            Long pId = Long.parseLong(idB.getTextContent());
+
+            if (pId == idUpdStudent) {
+                 studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(averageNewScore));
+            }
+        }
+        transform();
     }
 
 
 
 
-    public void updateStudent(long idUpdStudent, double averageNewScore) {
-        NodeList studentList = document.getElementsByTagName("student");
-        for (int i = 0; i < studentList.getLength(); i++) {
-            Element studentNode = (Element) studentList.item(i);
-            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
-            Long pId = Long.valueOf(idB.getTextContent());
 
-            if (idUpdStudent == pId) {
-                studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(averageNewScore));
-            }
-        }
-
+    public void transform() {
         Transformer transformer = null;
         try {
             transformer = TransformerFactory.newInstance().newTransformer();

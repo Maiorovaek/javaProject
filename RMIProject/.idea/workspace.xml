@@ -349,7 +349,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549426441304" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549426814287" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -444,7 +444,6 @@
       <item itemvalue="Application.RMIServer" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
@@ -452,7 +451,6 @@
         <item itemvalue="Application.RMIServer" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -485,12 +483,12 @@
       <workItem from="1549284274453" duration="621000" />
       <workItem from="1549310525177" duration="18084000" />
       <workItem from="1549355671456" duration="2393000" />
-      <workItem from="1549391663043" duration="34192000" />
+      <workItem from="1549391663043" duration="34297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150919000" />
+    <option name="totallyTimeSpent" value="151024000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -513,7 +511,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.38786566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.38786566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

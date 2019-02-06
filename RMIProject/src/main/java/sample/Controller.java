@@ -203,11 +203,11 @@ public class Controller {
 
             result = false;
         }
-        if (departmentColumn.getText().isEmpty()/*||*//*!isNumber(numberPageTextBox.getText())*/) {
+        if (departmentColumn.getText().isEmpty()) {
 
             result = false;
         }
-        if (avScoreField.getText().isEmpty() /*||  !isNumber(yearTextBox.getText()) || Integer.valueOf(yearTextBox.getText()) > 2019 */) {
+        if (avScoreField.getText().isEmpty() || Double.valueOf(avScoreField.getText()) >5) {
             result = false;
         }
         if (result == false) {

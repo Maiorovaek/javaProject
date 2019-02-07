@@ -205,9 +205,4 @@ public class Controller {
         avScoreField.setStyle("-fx-border-color:darkgray;");
 
     }
-
-    public void getAll(ActionEvent actionEvent) {
-
-
-    }
 }

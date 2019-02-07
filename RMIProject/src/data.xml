@@ -3,68 +3,20 @@
 
 
 
-<student>
-<id>2</id>
-<name>sdcs</name>
-<surname>sdcs</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>2.5</averageScore>
-</student>
-<student>
-<id>6</id>
-<name>eefwe</name>
-<surname>wef</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>2.7</averageScore>
-</student>
-<student>
-<id>2</id>
-<name>nvjcbg</name>
-<surname>jh</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>3.5</averageScore>
-</student>
-<student>
-<id>3</id>
-<name>jbk</name>
-<surname>jg</surname>
-<department>ForeignLanguages</department>
-<averageScore>2.9</averageScore>
-</student>
 
-<student>
-<id>4</id>
-<name>sfe</name>
-<surname>sef</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>4.7</averageScore>
-</student>
-<student>
-<id>1</id>
-<name>wadaw</name>
-<surname>dscds</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>2.7</averageScore>
-</student>
-<student>
-<id>12</id>
-<name>wefw</name>
-<surname>wef</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>2.6</averageScore>
-</student>
-<student>
-<id>2</id>
-<name>sdcs</name>
-<surname>sc</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>2.3</averageScore>
-</student>
-<student>
-<id>1</id>
-<name>asxa</name>
-<surname>sax</surname>
-<department>InformationalRadiosystems</department>
-<averageScore>2.8</averageScore>
-</student>
+    <student>
+        <id>2</id>
+        <name>Anfrey</name>
+        <surname>Kotov</surname>
+        <department>ForeignLanguages</department>
+        <averageScore>4.2</averageScore>
+    </student>
+    <student>
+        <id>3</id>
+        <name>Dima</name>
+        <surname>Kotov</surname>
+        <department>ForeignLanguages</department>
+        <averageScore>4.3</averageScore>
+    </student>
+    
 </listStudents>

@@ -1,6 +1,6 @@
 package rmi;
 
-import rmi.dao.CrudImpl;
+import rmi.server.CrudImpl;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;

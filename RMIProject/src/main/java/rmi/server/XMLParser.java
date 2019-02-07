@@ -1,4 +1,4 @@
-package rmi;
+package rmi.server;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -97,7 +97,7 @@ public class XMLParser {
     }
 
 
-    public void addStudent(Student newStudent) {
+    public void addStudentXML(Student newStudent) {
 
         Element root = document.getDocumentElement();
         Element student = document.createElement("student");
@@ -127,7 +127,7 @@ public class XMLParser {
     }
 
 
-    public void removeStudent(long idDelStudent) {
+    public void removeStudentXML(long idDelStudent) {
         NodeList studentList = document.getElementsByTagName("student");
 
         for (int i = 0; i < studentList.getLength(); i++) {
@@ -164,7 +164,7 @@ public class XMLParser {
     }
 
 
-    public void updateStudentAv(long idUpdStudent, double averageNewScore) {
+    public void updateStudentAvXML(long idUpdStudent, double averageNewScore) {
         NodeList studentList = document.getElementsByTagName("student");
         for (int i = 0; i < studentList.getLength(); i++) {
             Element studentNode = (Element) studentList.item(i);
@@ -172,14 +172,11 @@ public class XMLParser {
             Long pId = Long.parseLong(idB.getTextContent());
 
             if (pId == idUpdStudent) {
-                 studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(averageNewScore));
+                studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(averageNewScore));
             }
         }
         transform();
     }
-
-
-
 
 
     public void transform() {

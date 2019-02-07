@@ -1,35 +1,58 @@
 package rmi;
-
 import javafx.application.Application;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import rmi.dao.ICrudCollection;
+import javafx.util.converter.DoubleStringConverter;
+import rmi.server.ICrudCollection;
 import rmi.model.Student;
-import rmi.model.Student.Department;
-import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.List;
+import java.util.function.Predicate;
 
 
 public class RMIClient extends Application {
     private ICrudCollection collectiond;
+    public ObservableList<Student> studentListTable = FXCollections.observableArrayList();
+    @FXML
+    private TableView<Student> tableUsers;
 
-    public RMIClient() throws IOException {
+    @FXML
+    private TableColumn<Student, Long> idColumn;
 
-//        try {
+    @FXML
+    private TableColumn<Student, String> nameColumn, surnameColumn;
+
+    @FXML
+    private TableColumn<Student, Student.Department> departmentColumn;
+
+    @FXML
+    private TableColumn<Student, Double> avScoreColumn;
+
+    @FXML
+    private TextField idField, nameField, surnameField, avScoreField,searchField;
+
+    @FXML
+    private ComboBox<String> departmentField;
+
+    ObservableList<String> langs;
+
+
+    public RMIClient(){
         init();
-//
-//            mainLoop();
-//        } catch (IOException ex) {
-//            System.out.println(ex.getMessage());
-//        }
     }
 
     public void init() {
@@ -56,154 +79,142 @@ public class RMIClient extends Application {
         primaryStage.show();
 
     }
-
-
-//    private void mainLoop() throws IOException {
-//        char choice = 0;
-
-//        do {
-//            System.out.println("0. Exit");
-//            System.out.println("1. Get All Students");
-//            System.out.println("2. Add New Student");
-//            System.out.println("3. Find student's surname");
-//            System.out.println("4. Find student's name");
-//            System.out.println("5. Find student's departament");
-//            System.out.println("6. Find student's gradebook Number");
-//            System.out.println("7. who have score greater than entered ");
-//            System.out.println("8. delete to student's gradebook Number ");
-//            System.out.println("9. Update student ");
-//
-//            System.out.println("Введите пункт меню и нажмите Enter:");
-//            choice = (char) System.in.read();
-
-//            switch (choice) {
-//                case '1':
-//                    printAllStudents();
-//                    break;
-//                case '2':
-//                    addStudent();
-//                    break;
-//                case '3':
-//                    findSurname();
-//                    break;
-//                case '4':
-//                    findByName();
-//                    break;
-//                case '5':
-//                    findByDepartment();
-//                    break;
-//                case '6':
-//                    findByGradebookNumber();
-//                    break;
-//                case '7':
-//                    findWhosScoreGreater();
-//                    break;
-//                case '8':
-//                    removeStudent();
-//                    break;
-//                case '9':
-//                    updateStudent();
-//                    break;
-//            }
-//            System.in.read();
-//        }
-//        while (choice != '0');
-//        System.exit(0);
-//    }
-
-
-    private void addStudent() throws RemoteException {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите номер зачетной книжки ");
-        String numberS = in.next();
-        long number = Integer.parseInt(numberS);
-        System.out.println("Введите имя студента");
-        String name = in.next();
-        System.out.println("Введите фамилию студента");
-        String surname = in.next();
-        System.out.println("Введите отделение: ");
-        System.out.println("существуют" + Arrays.toString(Department.values()));
-        String d = in.next();
-        Department subject = Department.valueOf(d);
-        System.out.println("Введите оценку");
-        String m = in.next();
-        double minScore = Double.parseDouble(m);
-           Student s = new Student(number, name, surname, subject, minScore);
-          collectiond.addSt(s);
-         System.out.println("Добавлен студент " + s);
-    }
-
-    private void printAllStudents() throws RemoteException {
-        System.out.println("Список студентов: " + collectiond.getAll());
-    }
-
-    private void findSurname() throws IOException {
-
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите фамилию: ");
-        String surname = in.next();
-
-        System.out.println("Найти по фамилии" + collectiond.findBySurname(surname));
-    }
-
-    private void findByName() throws IOException {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите имя: ");
-        String name = in.next();
-
-        System.out.println("Найти по имени" + collectiond.findByName(name));
-    }
-
-    private void findByDepartment() throws IOException {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите отделение: ");
-        String d = in.next();
-        Department high = Department.valueOf(d);
-        System.out.println("Найти по отделению" + collectiond.findByDepartment(high));
-
-    }
-
-    private void findByGradebookNumber() throws IOException {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите номер зачетной книжки ");
-        String number = in.next();
-        long high = Integer.parseInt(number);
-        System.out.println("Студент " + collectiond.findByGradebookNumber(high));
-    }
-
-    private void findWhosScoreGreater() throws IOException {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите оценку, чтобы найти студентов у которых балл выше введенной оценки ");
-        String m = in.next();
-        double minScore = Double.parseDouble(m);
-
-        System.out.println("Студенты " + collectiond.findWhosScoreGreater(minScore));
-    }
-
-    private void removeStudent() throws IOException {
-
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите номер зачетной книжки для удаления студента ");
-        String number = in.next();
-        long high = Long.parseLong(number);
-        collectiond.removeStudent(high);
-
-    }
-
-
-    private void updateStudent() throws IOException {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите номер зачетной книжки ");
-        String idg = in.next();
-        Long ids = Long.valueOf(idg);
-        System.out.print("Введите обновленный балл");
-        String averageScore = in.next();
-        Double averageScoreD = Double.parseDouble(averageScore);
-        System.out.println("Информация обновлена о студенте с номером зачетной книжки " + ids);
-    }
-
-
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         launch(args);
+    }
+
+    // инициализируем форму данными
+    @FXML
+    private void initialize() throws RemoteException {
+        initData();
+
+    }
+
+    private void initData() throws RemoteException {
+         List<Student> s = collectiond.getAll();
+        studentListTable.addAll(s);
+        langs = FXCollections.observableArrayList("AppliedMathematics", "InformationalRadiosystems", "Chemistry", "ForeignLanguages");
+        tableUsers.setEditable(true);
+
+        surnameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        departmentField.setItems(langs);
+        avScoreColumn.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+
+        // устанавливаем тип и значение которое должно хранится в колонке
+        idColumn.setCellValueFactory(new PropertyValueFactory<Student, Long>("gradebookNumber"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
+        surnameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("surname"));
+        departmentColumn.setCellValueFactory(new PropertyValueFactory<Student, Student.Department>("departmet"));
+        avScoreColumn.setCellValueFactory(new PropertyValueFactory<Student, Double>("averageScore"));
+
+
+        FilteredList<Student> filteredData = new FilteredList<Student>(studentListTable, e -> true);
+        searchField.setOnKeyReleased(e -> {
+            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredData.setPredicate((Predicate<? super Student>) student -> {
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+                    String lowerCaseFilter = newValue.toLowerCase();
+                    String high = String.valueOf(student.getGradebookNumber());
+                    if (student.getName().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    } else if (student.getSurname().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    } else if (high.toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    }
+                    return false;
+                });
+            });
+
+            SortedList<Student> sortedList = new SortedList<>(filteredData);
+            sortedList.comparatorProperty().bind(tableUsers.comparatorProperty());
+            tableUsers.setItems(sortedList);
+        });
+        tableUsers.setItems(studentListTable);
+
+    }
+
+
+    @FXML
+    protected void addStudent(ActionEvent event) throws RemoteException {
+        studentListTable = tableUsers.getItems();
+        setDefaultFieldStyle();
+        if (validation() == true) {
+            String idFieldl = idField.getText();
+            long idFieldLong = Long.parseLong(idFieldl);
+            Student.Department dDepartment = Student.Department.valueOf(departmentField.getValue());
+            double avScoreDouble = Double.parseDouble(avScoreField.getText());
+            Student studentAdd = new Student(idFieldLong,
+                    nameField.getText(),
+                    surnameField.getText(),
+                    dDepartment,
+                    avScoreDouble);
+            studentListTable.add(studentAdd);
+            collectiond.addStudent(studentAdd);
+            idField.setText("");
+            nameField.setText("");
+            surnameField.setText("");
+            avScoreField.setText("");
+        }
+    }
+
+
+    @FXML
+    protected void delStudent(ActionEvent event) throws RemoteException {
+        studentListTable = tableUsers.getItems();
+        Student st = tableUsers.getSelectionModel().getSelectedItem();
+        if (st != null) {
+            int row = tableUsers.getSelectionModel().getSelectedIndex();
+            tableUsers.getItems().remove(row);
+            collectiond.removeStudent(st.getGradebookNumber());
+        }
+    }
+
+
+    public void onEditChange(TableColumn.CellEditEvent<Student, String> studentStringCellEditEvent) throws RemoteException {
+        Student student = tableUsers.getSelectionModel().getSelectedItem();
+        student.setSurname(studentStringCellEditEvent.getNewValue());
+        collectiond.updateStudentSurname(student.getGradebookNumber(), student.getSurname());
+    }
+
+    public void onEditChangeAvSc(TableColumn.CellEditEvent<Student, Double> studentDoubleCellEditEvent) throws RemoteException {
+        Student student = tableUsers.getSelectionModel().getSelectedItem();
+        student.setAverageScore(studentDoubleCellEditEvent.getNewValue());
+         collectiond.updateStudentAv(student.getGradebookNumber(), student.getAverageScore());
+    }
+
+
+    private boolean validation() {
+
+        boolean result = true;
+        if (idField.getText().equals(null) || idField.getText().isEmpty()) {
+            idField.setStyle("-fx-border-color:red;");
+            result = false;
+        }
+        if (nameField.getText().equals(null) || nameField.getText().isEmpty()) {
+            nameField.setStyle("-fx-border-color:red;");
+            result = false;
+
+        }
+        if (surnameField.getText().isEmpty() || surnameField.getText().equals(null) ) {
+            surnameField.setStyle("-fx-border-color:red;");
+            result = false;
+        }
+
+        if (avScoreField.getText().isEmpty() || Double.valueOf(avScoreField.getText()) > 5 || avScoreField.getText().equals(null) ) {
+            avScoreField.setStyle("-fx-border-color:red;");
+            result = false;
+        }
+        return result;
+    }
+
+    private void setDefaultFieldStyle() {
+        idField.setStyle("-fx-border-color:darkgray;");
+        nameField.setStyle("-fx-border-color:darkgray;");
+        surnameField.setStyle("-fx-border-color:darkgray;");
+        departmentField.setStyle("-fx-border-color:darkgray;");
+        avScoreField.setStyle("-fx-border-color:darkgray;");
     }
 }

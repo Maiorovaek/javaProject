@@ -11,12 +11,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import rmi.validate.* ?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-
+<GridPane fx:controller="rmi.RMIClient" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
     <children>
-
-
         <TableView fx:id="tableUsers" layoutX="16.0" layoutY="62.0" prefHeight="300.0" prefWidth="400.0">
             <columns>
                 <TableColumn prefWidth="80.0" text="№" fx:id="idColumn"/>
@@ -44,14 +40,12 @@
             <DoubleTextField fx:id="avScoreField" promptText="Average score" prefWidth="120"/>
             <Button text="Add" onAction="#addStudent"/>
             <Button text="Delete" onAction="#delStudent"/>
-            <!--<Button text="Get all" onAction="#getAll"/>-->
         </HBox>
 
         <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="3">
             <children>
                 <Label fx:id="lbl" layoutX="126.0" layoutY="92.0" minHeight="16" minWidth="69" text="Search"/>
-                <TextField fx:id="searchField" promptText="Search..." prefWidth="200" alignment="bottom_right"
-                           />
+                <TextField fx:id="searchField" promptText="Search..." prefWidth="200" alignment="bottom_right"/>
             </children>
         </HBox>
     </children>

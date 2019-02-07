@@ -3,20 +3,59 @@
 
 
 
+        <student>
+            <id>2</id>
+            <name>Anna</name>
+            <surname>Stasova</surname>
+            <department>AppliedMathematics</department>
+            <averageScore>4.1</averageScore>
+        </student>
 
+        <student>
+            <id>3</id>
+            <name>Andre</name>
+            <surname>Stasov</surname>
+            <department>AppliedMathematics</department>
+            <averageScore>4.4</averageScore>
+        </student>
+
+
+        
+
+
+        <student>
+            <id>5</id>
+            <name>Mark</name>
+            <surname>Panov</surname>
+            <department>Chemistry</department>
+            <averageScore>4.5</averageScore>
+        </student>
+
+
+        <student>
+            <id>6</id>
+            <name>Helen</name>
+            <surname>Kim</surname>
+            <department>ForeignLanguages</department>
+            <averageScore>4.5</averageScore>
+        </student>
+
+
+        
+        
+        <student>
+            <id>11</id>
+            <name>Alexander</name>
+            <surname>Selevanov</surname>
+            <department>Chemistry</department>
+            <averageScore>4.9</averageScore>
+        </student>
+        
     <student>
-        <id>2</id>
-        <name>Anfrey</name>
-        <surname>Kotov</surname>
-        <department>ForeignLanguages</department>
-        <averageScore>4.2</averageScore>
-    </student>
-    <student>
-        <id>3</id>
-        <name>Dima</name>
-        <surname>Kotov</surname>
-        <department>ForeignLanguages</department>
-        <averageScore>4.3</averageScore>
-    </student>
-    
+<id>324</id>
+<name>sdcs</name>
+<surname>sdc</surname>
+<department>Chemistry</department>
+<averageScore>4.9</averageScore>
+</student>
 </listStudents>

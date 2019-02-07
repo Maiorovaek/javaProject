@@ -1,23 +1,15 @@
 package sample;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.FlowPane;
 import javafx.util.converter.DoubleStringConverter;
-import javafx.util.converter.NumberStringConverter;
 import rmi.XMLParser;
 import rmi.model.Student;
 
@@ -27,7 +19,7 @@ import java.util.function.Predicate;
 public class Controller {
 
     XMLParser xmlParser = new XMLParser();
-    private ObservableList<Student> studentList = FXCollections.observableArrayList();
+    public ObservableList<Student> studentList = FXCollections.observableArrayList();
     @FXML
     private TableView<Student> tableUsers;
 
@@ -46,14 +38,11 @@ public class Controller {
     @FXML
     private TableColumn<Student, Double> avScoreColumn;
 
-
     @FXML
     private TextField idField, nameField, surnameField, avScoreField;
 
-    //  nameSearchField, surnameSearchField, AvScFieldSearch,idSearchField,
     @FXML
     private TextField searchField;
-
 
     @FXML
     private ComboBox<String> departmentField;
@@ -62,23 +51,26 @@ public class Controller {
     @FXML
     private Label lbl;
 
-
-    private final DoubleProperty avscDouble = new SimpleDoubleProperty();
-
-//    @FXML
-//    public TextField avScDoubleField;
-
     // инициализируем форму данными
     @FXML
     private void initialize() {
-
         initData();
+
+    }
+
+
+    private void initData() {
+        XMLParser xml = new XMLParser();
+        List<Student> s = xml.readListStudent();
+        studentList.addAll(s);
         langs = FXCollections.observableArrayList("AppliedMathematics", "InformationalRadiosystems", "Chemistry", "ForeignLanguages");
         tableUsers.setEditable(true);
+
         surnameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         departmentField.setItems(langs);
         avScoreColumn.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
         lbl = new Label();
+
 
         // устанавливаем тип и значение которое должно хранится в колонке
         idColumn.setCellValueFactory(new PropertyValueFactory<Student, Long>("gradebookNumber"));
@@ -97,15 +89,13 @@ public class Controller {
                     }
                     String lowerCaseFilter = newValue.toLowerCase();
                     String high = String.valueOf(student.getGradebookNumber());
-                   if (student.getName().toLowerCase().contains(lowerCaseFilter)) {
+                    if (student.getName().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    } else if (student.getSurname().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    } else if (high.toLowerCase().contains(lowerCaseFilter)) {
                         return true;
                     }
-                    else if (student.getSurname().toLowerCase().contains(lowerCaseFilter)) {
-                        return true;
-                    }
-                    else if(high.toLowerCase().contains(lowerCaseFilter)){
-                        return true;
-                   }
                     return false;
                 });
             });
@@ -115,17 +105,7 @@ public class Controller {
             tableUsers.setItems(sortedList);
 
         });
-
-
-        // заполняем таблицу данными
         tableUsers.setItems(studentList);
-    }
-
-
-    private void initData() {
-        XMLParser xml = new XMLParser();
-        List<Student> s = xml.readListStudent();
-        studentList.addAll(s);
 
     }
 
@@ -133,12 +113,12 @@ public class Controller {
     @FXML
     protected void addStudent(ActionEvent event) {
         studentList = tableUsers.getItems();
-
-        if (validation()) {
-            long idFieldLong = Long.parseLong(idField.getText());
+        setDefaultFieldStyle();
+        if (validation() == true) {
+            String idFieldl = idField.getText();
+            long idFieldLong = Long.parseLong(idFieldl);
             Student.Department dDepartment = Student.Department.valueOf(departmentField.getValue());
             double avScoreDouble = Double.parseDouble(avScoreField.getText());
-
             Student studentAdd = new Student(idFieldLong,
                     nameField.getText(),
                     surnameField.getText(),
@@ -147,24 +127,27 @@ public class Controller {
             studentList.add(studentAdd);
 
             xmlParser.addStudent(studentAdd);
-        } else {
-            lbl.setText("INVALID");
-        }
-        idField.setText("");
-        nameField.setText("");
-        surnameField.setText("");
+            idField.setText("");
+            nameField.setText("");
+            surnameField.setText("");
 
-        avScoreField.setText("");
+            avScoreField.setText("");
+        }
+
     }
 
 
     @FXML
     protected void delStudent(ActionEvent event) {
-
+        studentList = tableUsers.getItems();
         Student st = tableUsers.getSelectionModel().getSelectedItem();
-        int row = tableUsers.getSelectionModel().getSelectedIndex();
-        tableUsers.getItems().remove(row);
-        xmlParser.removeStudent(st.getGradebookNumber());
+        if (st != null) {
+            int row = tableUsers.getSelectionModel().getSelectedIndex();
+
+            tableUsers.getItems().remove(row);
+            xmlParser.removeStudent(st.getGradebookNumber());
+        }
+
 
     }
 
@@ -186,39 +169,45 @@ public class Controller {
 
         boolean result = true;
         String alert = "Please fill fields. \n";
-        if (idField.getText() == (null)) {
-            System.out.println("invalid id");
-            // idField.setStyle();
-            // nameField.setStyleName("status-error");
+        if (idField.getText().equals(null) || idField.getText().isEmpty()) {
+
+            idField.setStyle("-fx-border-color:red;");
+            alert += "id is null";
 
             result = false;
         }
-        if (nameField.getText().equals(null)) {
+        if (nameField.getText().equals(null) || nameField.getText().isEmpty()) {
 
             String regex = "[A-Za-z\\s]+";
-            System.out.println("invalid name");
-            return nameField.getText().matches(regex);
-        }
-        if (surnameField.getText().isEmpty()) {
+            nameField.setStyle("-fx-border-color:red;");
+            result = false;
 
+        }
+        if (surnameField.getText().isEmpty() || surnameField.getText().equals(null) ) {
+            surnameField.setStyle("-fx-border-color:red;");
             result = false;
         }
-        if (departmentColumn.getText().isEmpty()) {
 
+        if (avScoreField.getText().isEmpty() || Double.valueOf(avScoreField.getText()) > 5 || avScoreField.getText().equals(null) ) {
+            avScoreField.setStyle("-fx-border-color:red;");
             result = false;
         }
-        if (avScoreField.getText().isEmpty() || Double.valueOf(avScoreField.getText()) >5) {
-            result = false;
-        }
-        if (result == false) {
-            lbl.setText(alert);
-        }
+
 
         return result;
+    }
+
+    private void setDefaultFieldStyle() {
+        idField.setStyle("-fx-border-color:darkgray;");
+        nameField.setStyle("-fx-border-color:darkgray;");
+        surnameField.setStyle("-fx-border-color:darkgray;");
+        departmentField.setStyle("-fx-border-color:darkgray;");
+        avScoreField.setStyle("-fx-border-color:darkgray;");
 
     }
 
+    public void getAll(ActionEvent actionEvent) {
 
 
-
+    }
 }

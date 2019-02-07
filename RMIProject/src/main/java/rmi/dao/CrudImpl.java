@@ -97,11 +97,11 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
 
     @Override
     public void removeStudent(long idt) throws RemoteException {
-       // studentList.removeIf(p -> p.getGradebookNumber() == (idt));
-       // xml.removeStudent(idt);
+        // studentList.removeIf(p -> p.getGradebookNumber() == (idt));
+        // xml.removeStudent(idt);
         for (Student t : studentList) {
 
-            if(t.getGradebookNumber() == idt){
+            if (t.getGradebookNumber() == idt) {
                 xml.removeStudent(idt);
             }
         }
@@ -112,7 +112,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
         for (Student t : studentList) {
             if (t.getGradebookNumber() == (id)) {
                 System.out.println(t);
-               // t.setAverageScore(s);
+                // t.setAverageScore(s);
                 System.out.println(t);
                 t.setSurname(surname);
                 xml.updateStudent(id, surname);
@@ -125,7 +125,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
         for (Student t : studentList) {
             if (t.getGradebookNumber() == (id)) {
                 System.out.println(t);
-                 t.setAverageScore(st);
+                t.setAverageScore(st);
                 System.out.println(t);
                 t.setAverageScore(st);
                 xml.updateStudentAv(id, st);

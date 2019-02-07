@@ -58,8 +58,8 @@ public class RMIClient extends Application {
     }
 
 
-    private void mainLoop() throws IOException {
-        char choice = 0;
+//    private void mainLoop() throws IOException {
+//        char choice = 0;
 
 //        do {
 //            System.out.println("0. Exit");
@@ -108,8 +108,8 @@ public class RMIClient extends Application {
 //            System.in.read();
 //        }
 //        while (choice != '0');
-        System.exit(0);
-    }
+//        System.exit(0);
+//    }
 
 
     private void addStudent() throws RemoteException {

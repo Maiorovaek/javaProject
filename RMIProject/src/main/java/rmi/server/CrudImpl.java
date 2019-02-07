@@ -7,27 +7,27 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
 public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
-    public XMLParser xml = new XMLParser();
+    private XMLParser xml = new XMLParser();
     private List<Student> studentList;
 
 
     public CrudImpl() throws RemoteException {
-        xml.readListStudent();
+        this.xml.readListStudent();
     }
 
 
     @Override
-    public void addStudent(Student student) throws RemoteException {
-        xml.addStudentXML(student);
+    public synchronized void addStudent(Student student) throws RemoteException {
+        this.xml.addStudentXML(student);
     }
 
     @Override
 
-    public List<Student> getAll() throws RemoteException {
-        return xml.readListStudent();
+    public synchronized List<Student> getAll() throws RemoteException {
+        return this.xml.readListStudent();
     }
 
-    public List<Student> findBySurname(String surname) throws RemoteException {
+    public synchronized List<Student> findBySurname(String surname) throws RemoteException {
         List<Student> res = new ArrayList<>();
         for (Student s : studentList) {
             if (s.getSurname().equals(surname)) {
@@ -38,7 +38,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
         return res;
     }
 
-    public List<Student> findByName(String name) throws RemoteException {
+    public synchronized List<Student> findByName(String name) throws RemoteException {
         List<Student> res = new ArrayList<>();
         for (Student s : studentList) {
             if (s.getName().equals(name)) {
@@ -49,7 +49,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
         return res;
     }
 
-    public List<Student> findByDepartment(Student.Department department) throws RemoteException {
+    public synchronized List<Student> findByDepartment(Student.Department department) throws RemoteException {
         List<Student> res = new ArrayList<Student>();
 
         for (Student s : studentList) {
@@ -64,7 +64,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
         return res;
     }
 
-    public Student findByGradebookNumber(long number) throws RemoteException {
+    public synchronized Student findByGradebookNumber(long number) throws RemoteException {
         Student res = new Student();
         for (Student s : studentList) {
             if (s.getGradebookNumber() == (number)) {
@@ -74,7 +74,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
         return res;
     }
 
-    public List<Student> findWhosScoreGreater(double minScore) throws RemoteException {
+    public synchronized List<Student> findWhosScoreGreater(double minScore) throws RemoteException {
         List<Student> res = new ArrayList<>();
         for (Student s : studentList) {
             if (s.getAverageScore() >= (minScore)) {
@@ -86,28 +86,26 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
     }
 
 
-    public void removeStudent(long idt) throws RemoteException {
-        for (Student t : xml.readListStudent()) {
-            if (t.getGradebookNumber() == idt) {
-                xml.removeStudentXML(t.getGradebookNumber());
-            }
-        }
+    public synchronized void removeStudent(long idt) throws RemoteException {
+//        for (Student t : this.xml.readListStudent()) {
+//            if (t.getGradebookNumber() == idt) {
+                this.xml.removeStudentXML(idt);
+//            }
+//        }
     }
 
     @Override
-    public void updateStudentSurname(long id, String surname /*double s*/) throws RemoteException {
-        for (Student t : xml.readListStudent()) {
+    public synchronized void updateStudentSurname(long id, String surname /*double s*/) throws RemoteException {
+        for (Student t : this.xml.readListStudent()) {
             if (t.getGradebookNumber() == (id)) {
-                System.out.println(t);
-                System.out.println(t);
                 t.setSurname(surname);
-                xml.updateStudent(id, surname);
+                this.xml.updateStudent(id, surname);
             }
         }
     }
 
     @Override
-    public void updateStudentAv(long id, double st) throws RemoteException {
-        xml.updateStudentAvXML(id, st);
+    public synchronized void updateStudentAv(long id, double st) throws RemoteException {
+        this.xml.updateStudentAvXML(id, st);
     }
 }

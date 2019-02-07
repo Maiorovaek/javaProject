@@ -1,5 +1,8 @@
 package rmi;
+
 import javafx.application.Application;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -7,6 +10,7 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -17,6 +21,7 @@ import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import rmi.server.ICrudCollection;
 import rmi.model.Student;
+
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -25,7 +30,7 @@ import java.util.function.Predicate;
 
 
 public class RMIClient extends Application {
-    private ICrudCollection collectiond;
+    protected ICrudCollection collectiond;
     public ObservableList<Student> studentListTable = FXCollections.observableArrayList();
     @FXML
     private TableView<Student> tableUsers;
@@ -43,15 +48,27 @@ public class RMIClient extends Application {
     private TableColumn<Student, Double> avScoreColumn;
 
     @FXML
-    private TextField idField, nameField, surnameField, avScoreField,searchField;
+    private TextField idField, nameField, surnameField, avScoreField, searchField;
 
     @FXML
     private ComboBox<String> departmentField;
 
     ObservableList<String> langs;
+    private Stage form1(){
+        Stage stage=new Stage();
+        stage.setTitle("RMI 1");
+        stage.setScene(new Scene(new Group(new Button("RMI 1"))));
+        return stage;
+    }
+    private Stage form2(){
+        Stage stage=new Stage();
+        stage.setTitle("RMI 2");
+        stage.setScene(new Scene(new Group(new Button("RMI 2"))));
+        return stage;
+    }
 
 
-    public RMIClient(){
+    public RMIClient() {
         init();
     }
 
@@ -61,8 +78,8 @@ public class RMIClient extends Application {
             System.setSecurityManager(new SecurityManager());
         }
         try {
-            Registry registry = LocateRegistry.getRegistry();
-            collectiond = (ICrudCollection) registry.lookup("MyRemote");
+            Registry registry = LocateRegistry.getRegistry("localhost");
+            collectiond = (ICrudCollection) registry.lookup(ICrudCollection.NAME);
         } catch (Throwable cause) {
             System.err.println("" + cause.getMessage());
         }
@@ -77,9 +94,12 @@ public class RMIClient extends Application {
         rootBox.getChildren().addAll(root);
         primaryStage.setScene(new Scene(rootBox, 800, 500));
         primaryStage.show();
+        form1().show();
+        form2().show();
 
     }
-    public static void main(String[] args)  {
+
+    public static void main(String[] args) {
         launch(args);
     }
 
@@ -91,7 +111,7 @@ public class RMIClient extends Application {
     }
 
     private void initData() throws RemoteException {
-         List<Student> s = collectiond.getAll();
+        List<Student> s = collectiond.getAll();
         studentListTable.addAll(s);
         langs = FXCollections.observableArrayList("AppliedMathematics", "InformationalRadiosystems", "Chemistry", "ForeignLanguages");
         tableUsers.setEditable(true);
@@ -106,34 +126,34 @@ public class RMIClient extends Application {
         surnameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("surname"));
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Student, Student.Department>("departmet"));
         avScoreColumn.setCellValueFactory(new PropertyValueFactory<Student, Double>("averageScore"));
-
-
-        FilteredList<Student> filteredData = new FilteredList<Student>(studentListTable, e -> true);
-        searchField.setOnKeyReleased(e -> {
-            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
-                filteredData.setPredicate((Predicate<? super Student>) student -> {
-                    if (newValue == null || newValue.isEmpty()) {
-                        return true;
-                    }
-                    String lowerCaseFilter = newValue.toLowerCase();
-                    String high = String.valueOf(student.getGradebookNumber());
-                    if (student.getName().toLowerCase().contains(lowerCaseFilter)) {
-                        return true;
-                    } else if (student.getSurname().toLowerCase().contains(lowerCaseFilter)) {
-                        return true;
-                    } else if (high.toLowerCase().contains(lowerCaseFilter)) {
-                        return true;
-                    }
-                    return false;
-                });
-            });
-
-            SortedList<Student> sortedList = new SortedList<>(filteredData);
-            sortedList.comparatorProperty().bind(tableUsers.comparatorProperty());
-            tableUsers.setItems(sortedList);
-        });
+        initFilter();
         tableUsers.setItems(studentListTable);
+    }
 
+    private void initFilter() {
+        searchField.textProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (searchField.textProperty().get().isEmpty()) {
+                    tableUsers.setItems(studentListTable);
+                    return;
+                }
+                ObservableList<Student> tableItemas = FXCollections.observableArrayList();
+                ObservableList<TableColumn<Student, ?>> cols = tableUsers.getColumns();
+                for (int i = 0; i < studentListTable.size(); i++) {
+                    for (int j = 0; j < cols.size(); j++) {
+                        TableColumn col = cols.get(j);
+                        String cellValue = col.getCellData(studentListTable.get(i)).toString();
+                        cellValue = cellValue.toLowerCase();
+                        if (cellValue.contains(searchField.textProperty().get().toLowerCase())) {
+                            tableItemas.add(studentListTable.get(i));
+                            break;
+                        }
+                    }
+                }
+                tableUsers.setItems(tableItemas);
+            }
+        });
     }
 
 
@@ -164,11 +184,11 @@ public class RMIClient extends Application {
     @FXML
     protected void delStudent(ActionEvent event) throws RemoteException {
         studentListTable = tableUsers.getItems();
-        Student st = tableUsers.getSelectionModel().getSelectedItem();
-        if (st != null) {
-            int row = tableUsers.getSelectionModel().getSelectedIndex();
-            tableUsers.getItems().remove(row);
-            collectiond.removeStudent(st.getGradebookNumber());
+        Student student = tableUsers.getSelectionModel().getSelectedItem();
+        int st = tableUsers.getSelectionModel().getSelectedIndex();
+        if (student != null) {
+            studentListTable.remove(st);
+            collectiond.removeStudent(student.getGradebookNumber());
         }
     }
 
@@ -182,7 +202,7 @@ public class RMIClient extends Application {
     public void onEditChangeAvSc(TableColumn.CellEditEvent<Student, Double> studentDoubleCellEditEvent) throws RemoteException {
         Student student = tableUsers.getSelectionModel().getSelectedItem();
         student.setAverageScore(studentDoubleCellEditEvent.getNewValue());
-         collectiond.updateStudentAv(student.getGradebookNumber(), student.getAverageScore());
+        collectiond.updateStudentAv(student.getGradebookNumber(), student.getAverageScore());
     }
 
 
@@ -198,12 +218,12 @@ public class RMIClient extends Application {
             result = false;
 
         }
-        if (surnameField.getText().isEmpty() || surnameField.getText().equals(null) ) {
+        if (surnameField.getText().isEmpty() || surnameField.getText().equals(null)) {
             surnameField.setStyle("-fx-border-color:red;");
             result = false;
         }
 
-        if (avScoreField.getText().isEmpty() || Double.valueOf(avScoreField.getText()) > 5 || avScoreField.getText().equals(null) ) {
+        if (avScoreField.getText().isEmpty() || Double.valueOf(avScoreField.getText()) > 5 || avScoreField.getText().equals(null)) {
             avScoreField.setStyle("-fx-border-color:red;");
             result = false;
         }

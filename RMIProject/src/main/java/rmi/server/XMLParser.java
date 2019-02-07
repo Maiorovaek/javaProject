@@ -48,13 +48,12 @@ public class XMLParser {
     }
 
     public ArrayList<Student> readListStudent() {
-        // int ind = 1;
         NodeList studentNodeList = document.getElementsByTagName("student");
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < studentNodeList.getLength(); i++) {
             if (studentNodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 Element studentElement = (Element) studentNodeList.item(i);
-                Student student = new Student(11, "dd", "fdvdfv", Student.Department.AppliedMathematics, 4.9);
+                Student student = new Student();
                 NodeList childNodes = studentElement.getChildNodes();
 
                 for (int j = 0; j < childNodes.getLength(); j++) {
@@ -65,7 +64,6 @@ public class XMLParser {
                             case "id": {
 
                                 student.setGradebookNumber(Long.parseLong(childElement.getTextContent()));
-                                //                       ind++;
 
                             }
                             case "name": {

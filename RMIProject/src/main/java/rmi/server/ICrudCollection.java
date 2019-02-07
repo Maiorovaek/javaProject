@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 public interface ICrudCollection extends Remote {
+    String NAME = "MyRemote";
     void addStudent(Student student) throws RemoteException;
     List<Student> getAll() throws RemoteException;
     void removeStudent(long st) throws RemoteException;

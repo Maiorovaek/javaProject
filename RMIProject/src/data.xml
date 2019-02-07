@@ -2,60 +2,27 @@
 <listStudents>
 
 
-
-        <student>
-            <id>2</id>
-            <name>Anna</name>
-            <surname>Stasova</surname>
-            <department>AppliedMathematics</department>
-            <averageScore>4.1</averageScore>
-        </student>
-
-        <student>
-            <id>3</id>
-            <name>Andre</name>
-            <surname>Stasov</surname>
-            <department>AppliedMathematics</department>
-            <averageScore>4.4</averageScore>
-        </student>
-
-
-        
-
-
-        <student>
-            <id>5</id>
-            <name>Mark</name>
-            <surname>Panov</surname>
-            <department>Chemistry</department>
-            <averageScore>4.5</averageScore>
-        </student>
-
-
-        <student>
-            <id>6</id>
-            <name>Helen</name>
-            <surname>Kim</surname>
-            <department>ForeignLanguages</department>
-            <averageScore>4.5</averageScore>
-        </student>
-
-
-        
-        
-        <student>
-            <id>11</id>
-            <name>Alexander</name>
-            <surname>Selevanov</surname>
-            <department>Chemistry</department>
-            <averageScore>4.9</averageScore>
-        </student>
-        
     <student>
-<id>324</id>
-<name>sdcs</name>
-<surname>sdc</surname>
-<department>Chemistry</department>
-<averageScore>4.9</averageScore>
-</student>
+        <id>64</id>
+        <name>s</name>
+        <surname>sdv</surname>
+        <department>Chemistry</department>
+        <averageScore>5.0</averageScore>
+    </student>
+
+
+    <student>
+        <id>4554</id>
+        <name>dfv</name>
+        <surname>dfv</surname>
+        <department>Chemistry</department>
+        <averageScore>4.8</averageScore>
+    </student>
+    <student>
+        <id>6</id>
+        <name>fdb</name>
+        <surname>db</surname>
+        <department>ForeignLanguages</department>
+        <averageScore>4.1</averageScore>
+    </student>
 </listStudents>

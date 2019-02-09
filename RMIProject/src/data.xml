@@ -2,27 +2,32 @@
 <listStudents>
 
 
-    <student>
-        <id>64</id>
-        <name>s</name>
-        <surname>sdv</surname>
-        <department>Chemistry</department>
-        <averageScore>5.0</averageScore>
-    </student>
+    
 
 
-    <student>
-        <id>4554</id>
-        <name>dfv</name>
-        <surname>dfv</surname>
-        <department>Chemistry</department>
-        <averageScore>4.8</averageScore>
-    </student>
-    <student>
-        <id>6</id>
-        <name>fdb</name>
-        <surname>db</surname>
-        <department>ForeignLanguages</department>
-        <averageScore>4.1</averageScore>
-    </student>
+    
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+<student>
+<id>5</id>
+<name>dfbd</name>
+<surname>db</surname>
+<department>Chemistry</department>
+<averageScore>5.0</averageScore>
+</student>
 </listStudents>

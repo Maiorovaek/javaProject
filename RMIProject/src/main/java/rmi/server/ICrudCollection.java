@@ -1,5 +1,6 @@
 package rmi.server;
 
+import rmi.ClientInterface;
 import rmi.model.Student;
 
 import java.rmi.Remote;
@@ -8,6 +9,10 @@ import java.util.List;
 
 public interface ICrudCollection extends Remote {
     String NAME = "MyRemote";
+    String NAME2 = "Resourse";
+
+
+
     void addStudent(Student student) throws RemoteException;
     List<Student> getAll() throws RemoteException;
     void removeStudent(long st) throws RemoteException;

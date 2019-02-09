@@ -39,6 +39,7 @@
             <DoubleTextField fx:id="avScoreField" promptText="Average score" prefWidth="120"/>
             <Button text="Add" onAction="#addStudent"/>
             <Button text="Delete" onAction="#delStudent"/>
+            <Button text = "get All" onAction="#getAll"/>
         </HBox>
 
         <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="3">

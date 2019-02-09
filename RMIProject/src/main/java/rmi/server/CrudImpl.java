@@ -1,5 +1,6 @@
 package rmi.server;
 
+import rmi.ClientInterface;
 import rmi.model.Student;
 
 import java.rmi.RemoteException;
@@ -7,14 +8,13 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
 public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
+
     private XMLParser xml = new XMLParser();
     private List<Student> studentList;
-
 
     public CrudImpl() throws RemoteException {
         this.xml.readListStudent();
     }
-
 
     @Override
     public synchronized void addStudent(Student student) throws RemoteException {
@@ -45,6 +45,7 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
                 System.out.println(s);
                 res.add(s);
             }
+
         }
         return res;
     }
@@ -87,15 +88,11 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
 
 
     public synchronized void removeStudent(long idt) throws RemoteException {
-//        for (Student t : this.xml.readListStudent()) {
-//            if (t.getGradebookNumber() == idt) {
-                this.xml.removeStudentXML(idt);
-//            }
-//        }
+        this.xml.removeStudentXML(idt);
     }
 
     @Override
-    public synchronized void updateStudentSurname(long id, String surname /*double s*/) throws RemoteException {
+    public synchronized void updateStudentSurname(long id, String surname) throws RemoteException {
         for (Student t : this.xml.readListStudent()) {
             if (t.getGradebookNumber() == (id)) {
                 t.setSurname(surname);
@@ -108,4 +105,8 @@ public class CrudImpl extends UnicastRemoteObject implements ICrudCollection {
     public synchronized void updateStudentAv(long id, double st) throws RemoteException {
         this.xml.updateStudentAvXML(id, st);
     }
+
+
+
+
 }

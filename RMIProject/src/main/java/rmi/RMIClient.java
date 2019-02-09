@@ -1,16 +1,12 @@
 package rmi;
-
 import javafx.application.Application;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -21,15 +17,13 @@ import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import rmi.server.ICrudCollection;
 import rmi.model.Student;
-
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.List;
-import java.util.function.Predicate;
 
 
-public class RMIClient extends Application {
+public class RMIClient extends Application  {
     protected ICrudCollection collectiond;
     public ObservableList<Student> studentListTable = FXCollections.observableArrayList();
     @FXML
@@ -54,18 +48,6 @@ public class RMIClient extends Application {
     private ComboBox<String> departmentField;
 
     ObservableList<String> langs;
-    private Stage form1(){
-        Stage stage=new Stage();
-        stage.setTitle("RMI 1");
-        stage.setScene(new Scene(new Group(new Button("RMI 1"))));
-        return stage;
-    }
-    private Stage form2(){
-        Stage stage=new Stage();
-        stage.setTitle("RMI 2");
-        stage.setScene(new Scene(new Group(new Button("RMI 2"))));
-        return stage;
-    }
 
 
     public RMIClient() {
@@ -73,30 +55,36 @@ public class RMIClient extends Application {
     }
 
     public void init() {
-
         if (System.getSecurityManager() == null) {
             System.setSecurityManager(new SecurityManager());
         }
         try {
             Registry registry = LocateRegistry.getRegistry("localhost");
             collectiond = (ICrudCollection) registry.lookup(ICrudCollection.NAME);
+            Registry registry2 = LocateRegistry.getRegistry("localhost");
+            collectiond = (ICrudCollection) registry2.lookup(ICrudCollection.NAME2);
         } catch (Throwable cause) {
             System.err.println("" + cause.getMessage());
         }
     }
 
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         new RMIClient();
         primaryStage.setTitle("RMI GUI Client API");
+
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/main.fxml"));
         VBox rootBox = new VBox(5);
         rootBox.getChildren().addAll(root);
         primaryStage.setScene(new Scene(rootBox, 800, 500));
         primaryStage.show();
-        form1().show();
-        form2().show();
 
+        Parent secondRoot = FXMLLoader.load(getClass().getClassLoader().getResource("sample/main.fxml"));
+        Scene secondScene = new Scene(secondRoot);
+        Stage secondStage = new Stage();
+        secondStage.setScene(secondScene);
+        secondStage.show();
     }
 
     public static void main(String[] args) {
@@ -107,7 +95,6 @@ public class RMIClient extends Application {
     @FXML
     private void initialize() throws RemoteException {
         initData();
-
     }
 
     private void initData() throws RemoteException {
@@ -127,6 +114,8 @@ public class RMIClient extends Application {
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Student, Student.Department>("departmet"));
         avScoreColumn.setCellValueFactory(new PropertyValueFactory<Student, Double>("averageScore"));
         initFilter();
+
+
         tableUsers.setItems(studentListTable);
     }
 
@@ -159,6 +148,7 @@ public class RMIClient extends Application {
 
     @FXML
     protected void addStudent(ActionEvent event) throws RemoteException {
+
         studentListTable = tableUsers.getItems();
         setDefaultFieldStyle();
         if (validation() == true) {
@@ -178,6 +168,7 @@ public class RMIClient extends Application {
             surnameField.setText("");
             avScoreField.setText("");
         }
+
     }
 
 
@@ -192,6 +183,14 @@ public class RMIClient extends Application {
         }
     }
 
+    @FXML
+    public void getAll(ActionEvent actionEvent) throws RemoteException {
+
+        studentListTable.clear();
+        List<Student> s = collectiond.getAll();
+        studentListTable.addAll(s);
+        collectiond.getAll();
+    }
 
     public void onEditChange(TableColumn.CellEditEvent<Student, String> studentStringCellEditEvent) throws RemoteException {
         Student student = tableUsers.getSelectionModel().getSelectedItem();

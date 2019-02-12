@@ -1,8 +1,5 @@
 package sample;
-
 import java.io.Serializable;
-import java.util.Objects;
-
 
 public class Student implements Serializable {
 
@@ -19,10 +16,6 @@ public class Student implements Serializable {
         Chemistry,
         ForeignLanguages;
     }
-
-
-//    public Student() {
-//    }
 
     public long getGradebookNumber() {
         return gradebookNumber;
@@ -64,23 +57,6 @@ public class Student implements Serializable {
         this.averageScore = averageScore;
     }
 
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Student student = (Student) o;
-//        return gradebookNumber == student.gradebookNumber &&
-//                Double.compare(student.averageScore, averageScore) == 0 &&
-//                Objects.equals(name, student.name) &&
-//                Objects.equals(surname, student.surname) &&
-//                departmet == student.departmet;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(gradebookNumber, name, surname, departmet, averageScore);
-//    }
 
     public Student(long gradebookNumber, String name, String surname, Department departmet, double averageScore) {
         this.gradebookNumber = gradebookNumber;

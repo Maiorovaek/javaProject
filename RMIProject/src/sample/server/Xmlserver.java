@@ -23,7 +23,8 @@ import java.util.ArrayList;
 
 public class Xmlserver extends UnicastRemoteObject implements IServer {
     public ArrayList<IClient> clients = new ArrayList<>();
-static File file = new File("src/sample/baze.xml");
+    static File file = new File("src/sample/baze.xml");
+
     public Xmlserver() throws RemoteException {
         super();
     }
@@ -136,16 +137,45 @@ static File file = new File("src/sample/baze.xml");
 
             if (pId == idDelStudent) {
                 studentNode.getParentNode().removeChild(studentNode);
+            }
                 doc = parser.getDocument();
                 OutputFormat format = new OutputFormat(doc);
                 format.setIndenting(true);
                 XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File(String.valueOf(file))), format);
                 serializer.serialize(doc);
-            }
+
         }
     }
 
+    public static void editStudentXML(long id, Student student) throws IOException, SAXException {
 
+        DOMParser parser = new DOMParser();
+        parser.parse(String.valueOf(file));
+        Document doc = parser.getDocument();
+        NodeList studentList = doc.getElementsByTagName("student");
+        System.out.println(id);
+
+
+        for (int i = 0; i < studentList.getLength(); i++) {
+            Element studentNode = (Element) studentList.item(i);
+
+            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
+            long pId = Long.parseLong(idB.getTextContent());
+            if (pId == id) {
+                idB.setTextContent(String.valueOf(student.getGradebookNumber()));
+                studentNode.getElementsByTagName("surname").item(0).setTextContent(student.getSurname());
+                studentNode.getElementsByTagName("name").item(0).setTextContent(student.getName());
+                studentNode.getElementsByTagName("department").item(0).setTextContent(String.valueOf(student.getDepartmet()));
+                studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(student.getAverageScore()));
+            }
+            doc = parser.getDocument();
+            OutputFormat format = new OutputFormat(doc);
+            format.setIndenting(true);
+            XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File(String.valueOf(file))), format);
+            serializer.serialize(doc);
+        }
+
+    }
     public void addStudent(Student ex) throws RemoteException {
         System.out.println("Object get");
         try {
@@ -192,33 +222,6 @@ static File file = new File("src/sample/baze.xml");
         }
     }
 
-//    public  ArrayList<Student> search(String ser, int mode){
-//        ArrayList<Student> found = new ArrayList<>();
-//        int i=0;
-//        System.out.println("Search request get");
-//
-//
-//
-//        switch (mode) {
-//            case 1:
-//                while (i < arrayList.size()) {
-//                    if (arrayList.get(i).getName().equals(ser))
-//                        found.add(arrayList.get(i));
-//                    i++;
-//                }
-//                break;
-//            case 2:
-//                while (i < arrayList.size()) {
-//                    if (arrayList.get(i).getSurname().equals(ser))
-//                        found.add(arrayList.get(i));
-//                    i++;
-//                }
-//                break;
-//        }
-//
-//
-//        return found;
-//    }
 
     @Override
     public void registry(IClient client) {
@@ -232,56 +235,9 @@ static File file = new File("src/sample/baze.xml");
         System.out.println(this.clients.toString());
     }
 
-    @Override
-    public void updateSurname(long id, String surname) throws RemoteException {
-        try {
-            updateSurnameXML(id, surname);
-            for (IClient c : clients)
-                c.Update();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Object sucsseccfuly writed");
 
 
-    }
-
-    @Override
-    public void updateStudentAv(long id, double s) throws RemoteException {
-
-    }
-
-
-    public static void updateSurnameXML(long idUpdStudent, String surname) throws IOException, SAXException {
-
-        DOMParser parser = new DOMParser();
-        parser.parse(String.valueOf(file));
-        Document document = parser.getDocument();
-        NodeList studentList = document.getElementsByTagName("student");
-
-        for (int i = 0; i < studentList.getLength(); i++) {
-            Element studentNode = (Element) studentList.item(i);
-            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
-            Long pId = Long.parseLong(idB.getTextContent());
-
-            if (pId == idUpdStudent) {
-                // studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(averageNewScore));
-
-                studentNode.getElementsByTagName("surname").item(0).setTextContent(surname);
-            }
-            document = parser.getDocument();
-            OutputFormat format = new OutputFormat(document);
-            format.setIndenting(true);
-            XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File(String.valueOf(file))), format);
-            serializer.serialize(document);
-        }
-
-    }
-
-    public void editStudent(int id, Student student) {
+    public void editStudent(long id, Student student) {
         try {
             editStudentXML(id, student);
             for (IClient c : clients)
@@ -294,37 +250,12 @@ static File file = new File("src/sample/baze.xml");
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 
 
-    public static void editStudentXML(int id, Student student) throws IOException, SAXException {
 
-        DOMParser parser = new DOMParser();
-        parser.parse(String.valueOf(file));
-        Document doc = parser.getDocument();
-        NodeList studentList = doc.getElementsByTagName("student");
-        System.out.println(id);
-
-
-        for (int i = 0; i < studentList.getLength(); i++) {
-            Element studentNode = (Element) studentList.item(i);
-
-            Element idB = (Element) studentNode.getElementsByTagName("id").item(0);
-            // long pId = Long.parseLong(idB.getTextContent());
-            idB.setTextContent(String.valueOf(student.getGradebookNumber()));
-            studentNode.getElementsByTagName("surname").item(0).setTextContent(student.getSurname());
-            studentNode.getElementsByTagName("name").item(0).setTextContent(student.getName());
-            studentNode.getElementsByTagName("department").item(0).setTextContent(String.valueOf(student.getDepartmet()));
-            studentNode.getElementsByTagName("averageScore").item(0).setTextContent(String.valueOf(student.getAverageScore()));
-
-            doc = parser.getDocument();
-            OutputFormat format = new OutputFormat(doc);
-            format.setIndenting(true);
-            XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File(String.valueOf(file))), format);
-            serializer.serialize(doc);
-        }
-
-    }
 
     @Override
     public ArrayList<Student> search(String ser, int mode) throws RemoteException {
@@ -340,6 +271,5 @@ static File file = new File("src/sample/baze.xml");
         } catch (Exception e) {
             System.out.println(e);
         }
-
     }
 }

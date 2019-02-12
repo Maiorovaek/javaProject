@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.server.IServer;
 import sample.Student;
+
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -60,18 +61,7 @@ class Client extends UnicastRemoteObject implements IClient {
     }
 
 
-    public void updateStudentSurname(long id, String surname) throws RemoteException {
-        rmi.updateSurname(id, surname);
-
-
-    }
-
-
-    public void updateStudentC(long id, double s) throws RemoteException {
-        rmi.updateStudentAv(id, s);
-    }
-
-    public void edit(int index, Student b) {
+    public void editStudentC(long index, Student b) {
         try {
             rmi.editStudent(index, b);
         } catch (RemoteException e) {
@@ -98,7 +88,6 @@ class Client extends UnicastRemoteObject implements IClient {
     @Override
     public void Update() throws RemoteException {
         data.clear();
-        //вывод таблицы
         ArrayList<Student> sdd = rmi.print();
         data.addAll(sdd);
         rmi.print();

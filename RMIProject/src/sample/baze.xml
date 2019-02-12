@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <listStudents>
     <student>
-        <id>242</id>
-        <name>efsef</name>
-        <surname>sefesf</surname>
+        <id>211</id>
+        <name>Anna</name>
+        <surname>Stasova</surname>
+        <department>AppliedMathematics</department>
+        <averageScore>4.1</averageScore>
+    </student>
+    <student>
+        <id>466</id>
+        <name>Alexander</name>
+        <surname>Romanov</surname>
+        <department>Chemistry</department>
+        <averageScore>4.8</averageScore>
+    </student>
+    <student>
+        <id>546888</id>
+        <name>sefesf</name>
+        <surname>sefsf</surname>
         <department>InformationalRadiosystems</department>
-        <averageScore>4.0</averageScore>
+        <averageScore>5.0</averageScore>
+    </student>
+    <student>
+        <id>434355</id>
+        <name>adwa</name>
+        <surname>wdadscs</surname>
+        <department>InformationalRadiosystems</department>
+        <averageScore>4.8</averageScore>
     </student>
 </listStudents>

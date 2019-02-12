@@ -6,21 +6,17 @@ import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import javafx.util.converter.DoubleStringConverter;
 import sample.Student;
 
@@ -61,21 +57,16 @@ public class ClientFX extends Application {
 
     }
 
-
-    //То, что будет выполнено при старте приложения
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-
             client.Update();
             primaryStage.setTitle("RMI GUI ClientImpl API");
-
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/main.fxml"));
             VBox rootBox = new VBox(5);
             rootBox.getChildren().addAll(root);
             primaryStage.setScene(new Scene(rootBox, 800, 500));
             primaryStage.show();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -84,29 +75,19 @@ public class ClientFX extends Application {
 
     @FXML
     private void initialize() throws RemoteException {
-
-
         langs = FXCollections.observableArrayList("AppliedMathematics", "InformationalRadiosystems", "Chemistry", "ForeignLanguages");
-        // tableUsers.setEditable(true);
-
         surnameColumn.setCellFactory(TextFieldTableCell.<Student>forTableColumn());
         departmentField.setItems(langs);
         avScoreColumn.setCellFactory(TextFieldTableCell.<Student, Double>forTableColumn(new DoubleStringConverter()));
 
-        // устанавливаем тип и значение которое должно хранится в колонке
         idColumn.setCellValueFactory(new PropertyValueFactory<Student, Long>("gradebookNumber"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
         surnameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("surname"));
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Student, Student.Department>("departmet"));
         avScoreColumn.setCellValueFactory(new PropertyValueFactory<Student, Double>("averageScore"));
         initFilter();
-
-        //   List<Student> s = collectiond.getAll();
-        //  studentListTable.addAll(s);
         if (client == null) System.out.println("Client null");
         tableUsers.setItems(client.data);
-        //tableUsers.getColumns().addAll(idColumn,nameColumn, surnameColumn,departmentColumn,avScoreColumn);
-
 
     }
 
@@ -151,8 +132,6 @@ public class ClientFX extends Application {
                     dDepartment,
                     avScoreDouble);
 
-            System.out.println(studentAdd);
-
             client.addData(studentAdd);
 
             idField.setText("");
@@ -168,11 +147,9 @@ public class ClientFX extends Application {
     protected void delStudent(ActionEvent event) throws RemoteException {
         client.data = tableUsers.getItems();
         Student student = tableUsers.getSelectionModel().getSelectedItem();
-        int st = tableUsers.getSelectionModel().getSelectedIndex();
         if (student != null) {
             client.deleteDate(student.getGradebookNumber());
 
-            System.out.println(student);
 
         }
     }
@@ -187,18 +164,6 @@ public class ClientFX extends Application {
         }
     }
 
-
-    public void onEditChange(TableColumn.CellEditEvent<Student, String> studentStringCellEditEvent) throws RemoteException {
-        Student student = tableUsers.getSelectionModel().getSelectedItem();
-        student.setSurname(studentStringCellEditEvent.getNewValue());
-        client.updateStudentSurname(student.getGradebookNumber(), student.getSurname());
-    }
-
-    public void onEditChangeAvSc(TableColumn.CellEditEvent<Student, Double> studentDoubleCellEditEvent) throws RemoteException {
-        Student student = tableUsers.getSelectionModel().getSelectedItem();
-        student.setAverageScore(studentDoubleCellEditEvent.getNewValue());
-        // collectiond.updateStudentAv(student.getGradebookNumber(), student.getAverageScore());
-    }
 
     private boolean validation() {
 
@@ -237,13 +202,73 @@ public class ClientFX extends Application {
         client.disconnetc(client);
     }
 
+
+    public boolean showStudentEditDialog(Student student) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(ClientFX.class.getClassLoader().getResource("sample/EditDialog.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Edit Student");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Передаём адресата в контроллер.
+            EditDialogController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setStudent(student);
+
+            // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+
+    }
+
     public static void main(String[] args) throws Exception {
         launch(args);
     }
 
-//
+    @FXML
+    public void editStudent(ActionEvent actionEvent) {
+        Student selectedStudent = tableUsers.getSelectionModel().getSelectedItem();
 
+        long idSt = selectedStudent.getGradebookNumber();
 
+        if (selectedStudent != null) {
+            boolean okClicked = showStudentEditDialog(selectedStudent);
+            if (okClicked) {
+                showStudentDetails(selectedStudent, idSt);
             }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("No Selection");
+            alert.setHeaderText("No Student Selected");
+            alert.setContentText("Please select a student in the table.");
+
+            alert.showAndWait();
+        }
+    }
 
 
+    private void showStudentDetails(Student student, long id) {
+
+        if (student != null) {
+            client.editStudentC(id, student);
+
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error fields");
+            alert.showAndWait();
+        }
+    }
+}

@@ -16,9 +16,9 @@
             <columns>
                 <TableColumn prefWidth="80.0" text="№" fx:id="idColumn"/>
                 <TableColumn prefWidth="80.0" text="Name" fx:id="nameColumn"/>
-                <TableColumn prefWidth="90.0" text="Surname" onEditCommit="#onEditChange" fx:id="surnameColumn"/>
+                <TableColumn prefWidth="90.0" text="Surname"  fx:id="surnameColumn"/>
                 <TableColumn prefWidth="100.0" text="Department" fx:id="departmentColumn"/>
-                <TableColumn prefWidth="90.0" text="Average Score" onEditCommit="#onEditChangeAvSc" fx:id="avScoreColumn">
+                <TableColumn prefWidth="90.0" text="Average Score" fx:id="avScoreColumn">
                     <cellValueFactory>
                         <PropertyValueFactory property=""/>
                     </cellValueFactory>
@@ -39,7 +39,7 @@
             <Button text="Add" onAction="#addStudent"/>
             <Button text="Delete" onAction="#delStudent"/>
             <Button text = "get All" onAction="#getAllBtn"/>
-            
+
         </HBox>
 
         <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="3">
@@ -47,6 +47,10 @@
                 <Label fx:id="lbl" layoutX="126.0" layoutY="92.0" minHeight="16" minWidth="69" text="Search"/>
                 <TextField fx:id="searchField" promptText="Search..." prefWidth="200" alignment="bottom_right"  />
             </children>
+        </HBox>
+
+        <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="4">
+            <Button text = "Edit" onAction="#editStudent"/>
         </HBox>
     </children>
 </GridPane>

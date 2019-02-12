@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listStudents>
+    <student>
+        <id>435</id>
+        <name>dsfsf</name>
+        <surname>esfsf</surname>
+        <department>AppliedMathematics</department>
+        <averageScore>4.0</averageScore>
+    </student>
+    <student>
+        <id>33</id>
+        <name>sdcs</name>
+        <surname>scs</surname>
+        <department>InformationalRadiosystems</department>
+        <averageScore>4.6</averageScore>
+    </student>
+
+    <student>
+        <id>55</id>
+        <name>dcsc</name>
+        <surname>ff</surname>
+        <department>AppliedMathematics</department>
+        <averageScore>4.5</averageScore>
+    </student>
+</listStudents>

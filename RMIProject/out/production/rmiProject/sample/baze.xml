@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listStudents>
+    <student>
+        <id>4335</id>
+        <name>awda</name>
+        <surname>awdaw</surname>
+        <department>InformationalRadiosystems</department>
+        <averageScore>1.0</averageScore>
+    </student>
+</listStudents>
